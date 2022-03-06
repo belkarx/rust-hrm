@@ -3,25 +3,101 @@ use std::fs;
 use std::collections::BTreeMap as Map;
 use std::error::Error;
 
-#[derive(Debug, Deserialize, Default)]
+//The optional values
+#[derive(Debug, Default)]
 struct Subject {
-    alias: String, //required
-    uses: Uses, //required
     source: String,
     contact: String,
     name: String, 
 }
 
-#[derive(Debug, Deserialize, Default)]
+//The less optional values
+#[derive(Debug, Deserialize)]
+struct RawSubject {
+    alias: String, //required
+    uses: Uses, //required
+    source: Option<String>,
+    contact: Option<String>,
+    name: Option<String>, 
+}
+
+//Everything here is required
+#[derive(Debug, Deserialize)]
 struct Uses {
     form: String,
     details: Vec<String>,
 }
 
+fn read_data(input: &str) -> Result<Map<String, Data>, Box<Error>> {
+    #[derive(Deserialize)]
+    struct RawSubject {
+        alias: String, //required
+        uses: Uses, //required
+        source: Option<String>,
+        contact: Option<String>,
+        name: Option<String>, 
+    }
+
+    // Deserialize the raw data
+    let raw_readings: Vec<RawReading> = serde_json::from_str(input)?;
+
+    // Loop over raw data and insert each reading into the right sensor's struct
+    let mut m = Map::new();
+    for raw in raw_readings {
+        // Look up this sensor's Data struct
+        let subject = m.entry(raw.alias).or_insert_with(Subject::default);
+
+        // One push for every vector in the struct, even for missing observations
+        subject.source.push(raw.luminosity);
+        sensor.contact.push(.color);
+    }
+    Ok(m)
+}
+
+
 fn main() {
+let input = r##"[
+                      {
+                        "sensor": "left",
+                        "luminosity": "50",
+                        "color": "(255,0,0)"
+                      },
+                      {
+                        "sensor": "left",
+                        "color": "#0f0"
+                      },
+                      {
+                        "sensor": "right",
+                        "luminosity": "20"
+                      },
+                      {
+                        "sensor": "right",
+                        "luminosity": "40",
+                        "color": "(255,0,0)"
+                      },
+                      {
+                        "sensor": "left",
+                        "luminosity": "30"
+                      },
+                      {
+                        "sensor": "top",
+                        "luminosity": "10"
+                      },
+                      {
+                        "sensor": "right",
+                        "color": "(0,0,0)"
+                      }
+                    ]"##;
+    let m = read_sensor_data(input).unwrap();
+    println!("{:#?}", m);
+}
+
+
+
+
     let file = fs::read_to_string("text.json").expect("Unable to read file");
 
-    let person: Person = serde_json::from_str(&file).expect("JSON was not well-formatted");
+    let subject: Person = serde_json::from_str(&file).expect("JSON was not well-formatted");
     println!("{:?}", person)
 }
 /*
