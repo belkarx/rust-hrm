@@ -1,0 +1,43 @@
+    let input = r###"
+[
+    {
+        "alias": "CTFCryptic",
+        "uses": ["", ""]
+        "name": "Nicholas Eric Stepan",
+        "occupation": "",
+        "age": "",
+    },
+    {
+        "sensor": "left",
+        "color": "#0f0"
+    },
+    {
+        "sensor": "right",
+        "luminosity": "20"
+    },
+    {
+        "sensor": "right",
+        "luminosity": "40",
+        "color": "(255,0,0)"
+    },
+    {
+        "sensor": "left",
+        "luminosity": "30"
+    },
+    {
+        "sensor": "top",
+        "luminosity": "10"
+    },
+    {
+        "sensor": "right",
+        "color": "(0,0,0)"
+    }
+]
+"###;
+
+
+ alias: String,
+    name: String,
+    age: String,
+    source: String,
+
