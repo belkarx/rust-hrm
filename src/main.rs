@@ -15,6 +15,7 @@ struct Subject {
 #[derive(Debug, Deserialize)]
 struct Uses {
     form: String,
+    details: Vec<String>,
 }
 
 fn main() {
@@ -23,17 +24,9 @@ fn main() {
     let person: Person = serde_json::from_str(&file).expect("JSON was not well-formatted");
     println!("{:?}", person)
 }
-
-#[derive(Debug)]
-enum Age {
-    Old,
-    Young,
-    Uni,
-    School
-}
-
+/*
 enum Form {
     Professional,
     Informative,
     Social
-}
+}*/
