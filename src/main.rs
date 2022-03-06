@@ -7,7 +7,6 @@ use std::error::Error;
 #[derive(Debug, Default)]
 struct Subject {
     source: String,
-    contact: String,
     name: String, 
 }
 
@@ -16,8 +15,8 @@ struct Subject {
 struct RawSubject {
     alias: String, //required
     uses: Uses, //required
+    contact: Map<String, String>, //required
     source: Option<String>,
-    contact: Option<String>,
     name: Option<String>, 
 }
 
@@ -28,19 +27,16 @@ struct Uses {
     details: Vec<String>,
 }
 
-fn read_data(input: &str) -> Result<Map<String, Data>, Box<Error>> {
-    // Deserialize the raw data
+fn read_data(input: &str) -> Result<Map<String, Subject>, Box<Error>> {
     let raw_subjects: Vec<RawSubject> = serde_json::from_str(input)?;
 
-    // Loop over raw data and insert each reading into the right sensor's struct
     let mut m = Map::new();
     for raw in raw_subjects {
-        // Look up this sensor's Data struct
-        let subject = m.entry(raw.alias).or_insert_with(Subject::default);
+        let map_entry = m.entry(raw.alias).or_insert_with(Subject::default);
 
         // One push for every vector in the struct, even for missing observations
-        subject.source.push(raw.luminosity);
-        sensor.contact.push(.color);
+        map_entry.source.push(raw.luminosity);
+        map_entry.contact.push(raw.color);
     }
     Ok(m)
 }
