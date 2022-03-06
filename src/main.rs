@@ -11,6 +11,7 @@ struct Subject {
     contact: String,
     name: String, 
 }
+
 #[derive(Debug, Deserialize)]
 struct Uses {
     form: String,
