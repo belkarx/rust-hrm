@@ -12,7 +12,7 @@ struct Subject {
     name: String, 
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Defaults)]
 struct Uses {
     form: String,
     details: Vec<String>,
