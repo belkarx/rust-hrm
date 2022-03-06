@@ -27,3 +27,11 @@ fn main() {
     let person: Person = serde_json::from_str(&file).expect("JSON was not well-formatted");
     println!("{:?}", person)
 }
+
+
+enum Age {
+    Old,
+    Young,
+    Uni,
+    School
+}
