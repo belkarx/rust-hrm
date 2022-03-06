@@ -22,6 +22,6 @@ struct Address {
 fn main() {
     let mut file = fs::read_to_string("text.json").unwrap();
 
-    let person: Person = serde_json::from_str(file).expect("JSON was not well-formatted");
+    let person: Person = serde_json::from_str(&file).expect("JSON was not well-formatted");
     println!("{:?}", person)
 }
