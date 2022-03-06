@@ -3,7 +3,7 @@ use std::fs;
 use std::collections::BTreeMap as Map;
 use std::error::Error;
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Default)]
 struct Subject {
     alias: String, //required
     uses: Uses, //required
