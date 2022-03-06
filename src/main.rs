@@ -28,7 +28,7 @@ fn main() {
     println!("{:?}", person)
 }
 
-
+#[derive(Debug)]
 enum Age {
     Old,
     Young,
