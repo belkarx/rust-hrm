@@ -124,10 +124,9 @@ struct Uses {
             "details": ["Windows", "Microsoft Insider", "OSdev"]
         },
         "contact": {
-            "discord": "Ahuman#0955",
-            "email": "doggie0@outlook.com",
-            "IRL": "Interlake"
+            "IRL": "Interlake",
+            "phone": ""
         },
-        "source": "reddit (linuxmasterrace)"
+        "name": "Nick Stepan"
     }
 ]
