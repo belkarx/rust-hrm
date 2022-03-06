@@ -103,19 +103,31 @@ struct Uses {
     details: Vec<String>,
 }
 
-
-{
-    "alias": "Cake",
-    "uses": {
-        "form": "Informational",
-        "details": ["Goes to Interlake", "Cybersec", "Linux"]
+[
+    {
+        "alias": "Cake",
+        "uses": {
+            "form": "Informational",
+            "details": ["Goes to Interlake", "Cybersec", "Linux"]
+        },
+        "contact": {
+            "discord": "Ahuman#0955",
+            "email": "doggie0@outlook.com",
+            "IRL": "Interlake"
+        },
+        "source": "reddit (linuxmasterrace)"
     },
-    "contact": {
-        "discord": "Ahuman#0955",
-        "email": "doggie0@outlook.com",
-        "IRL": "Interlake"
-    },
-    "source": "reddit (linuxmasterrace)"
-}
-
-let obj: Map<String, Value> = parsed.as_object().unwrap().clone()
+    {
+        "alias": "CTFcryptic",
+        "uses": {
+            "form": "Professional",
+            "details": ["Windows", "Microsoft Insider", "OSdev"]
+        },
+        "contact": {
+            "discord": "Ahuman#0955",
+            "email": "doggie0@outlook.com",
+            "IRL": "Interlake"
+        },
+        "source": "reddit (linuxmasterrace)"
+    }
+]
