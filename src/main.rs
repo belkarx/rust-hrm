@@ -1,18 +1,20 @@
 use serde::Deserialize;
 use std::fs;
+use std::collections::BTreeMap as Map;
+use std::error::Error;
 
 #[derive(Debug, Deserialize)]
-#[serde(rename_all = "PascalCase")]
-struct Person {
-    first_name: String,
-    last_name: String,
-    age: u8,
-    address: Address,
-    phone_numbers: Vec<String>,
+struct Subject {
+    alias: String, //required
+    uses: Vec<String>, //required
+        occupation: String,
+    source: String,
+    contact: String,
+    name: String, 
+    age: String,
 }
 
 #[derive(Debug, Deserialize)]
-#[serde(rename_all = "PascalCase")]
 struct Address {
     street: String,
     city: String,
