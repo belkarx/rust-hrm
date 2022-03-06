@@ -12,13 +12,6 @@ struct Subject {
     name: String, 
 }
 
-
-impl<T> Default for A<T> {
-    fn default() -> Self {
-        Self { field: Default::default() }
-    }
-}
-
 #[derive(Debug, Deserialize, Default)]
 struct Uses {
     form: String,
