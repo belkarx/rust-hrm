@@ -15,7 +15,6 @@ struct Subject {
 #[derive(Debug, Deserialize)]
 struct Uses {
     form: String,
-
 }
 
 fn main() {
@@ -31,4 +30,10 @@ enum Age {
     Young,
     Uni,
     School
+}
+
+enum Form {
+    Professional,
+    Informative,
+    Social
 }
