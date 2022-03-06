@@ -11,7 +11,7 @@ struct Subject {
     source: String,
     contact: String,
     name: String, 
-    age: String,
+    age: Age,
 }
 
 #[derive(Debug, Deserialize)]
