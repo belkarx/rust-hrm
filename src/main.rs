@@ -29,21 +29,12 @@ struct Uses {
 }
 
 fn read_data(input: &str) -> Result<Map<String, Data>, Box<Error>> {
-    #[derive(Deserialize)]
-    struct RawSubject {
-        alias: String, //required
-        uses: Uses, //required
-        source: Option<String>,
-        contact: Option<String>,
-        name: Option<String>, 
-    }
-
     // Deserialize the raw data
-    let raw_readings: Vec<RawReading> = serde_json::from_str(input)?;
+    let raw_subjects: Vec<RawSubject> = serde_json::from_str(input)?;
 
     // Loop over raw data and insert each reading into the right sensor's struct
     let mut m = Map::new();
-    for raw in raw_readings {
+    for raw in raw_subjects {
         // Look up this sensor's Data struct
         let subject = m.entry(raw.alias).or_insert_with(Subject::default);
 
