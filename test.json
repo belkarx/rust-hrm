@@ -109,7 +109,7 @@ struct Uses {
     "uses": {
         "form": "Informational",
         "details": ["Goes to Interlake", "Cybersec", "Linux"]
-    }
+    },
     "contact": {
         "discord": "Ahuman#0955",
         "email": "doggie0@outlook.com"
