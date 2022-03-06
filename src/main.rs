@@ -11,6 +11,7 @@ struct Subject {
     contact: String,
     name: String, 
 }
+#[derive(Debug)]
 struct Uses {
     form: String,
 
