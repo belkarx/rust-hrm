@@ -1,5 +1,5 @@
 use serde::Deserialize;
-use std::fs::File;
+use std::fs;
 
 #[derive(Debug, Deserialize)]
 #[serde(rename_all = "PascalCase")]
