@@ -12,7 +12,14 @@ struct Subject {
     name: String, 
 }
 
-#[derive(Debug, Deserialize, Defaults)]
+
+impl<T> Default for A<T> {
+    fn default() -> Self {
+        Self { field: Default::default() }
+    }
+}
+
+#[derive(Debug, Deserialize, Default)]
 struct Uses {
     form: String,
     details: Vec<String>,
