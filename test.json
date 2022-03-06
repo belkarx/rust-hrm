@@ -2,7 +2,7 @@
 [
     {
         "alias": "CTFCryptic",
-        "uses": ["", ""]
+        "uses": ["", ""],
         "name": "Nicholas Eric Stepan",
         "occupation": "",
         "age": "",
