@@ -6,19 +6,14 @@ use std::error::Error;
 #[derive(Debug, Deserialize)]
 struct Subject {
     alias: String, //required
-    uses: Vec<String>, //required
-        occupation: String,
+    uses: Uses, //required
     source: String,
     contact: String,
     name: String, 
-    age: Option<Age>,
 }
+struct Uses {
+    form: String,
 
-#[derive(Debug, Deserialize)]
-struct Address {
-    street: String,
-    city: String,
-    country: String,
 }
 
 fn main() {
