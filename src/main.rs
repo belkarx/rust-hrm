@@ -21,7 +21,6 @@ struct Address {
 
 fn main() {
     let file = fs::read_to_string("text.json").expect("Unable to read file");
-  let data = fs::read_to_string("/etc/hosts")
 
     let person: Person = serde_json::from_str(&file).expect("JSON was not well-formatted");
     println!("{:?}", person)
