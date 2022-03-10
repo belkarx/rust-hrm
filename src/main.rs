@@ -1,3 +1,4 @@
+/*
 use serde::Deserialize;
 use std::fs;
 use std::collections::BTreeMap as Map;
@@ -87,7 +88,7 @@ let input = r##"[
     let subject: Person = serde_json::from_str(&file).expect("JSON was not well-formatted");
     println!("{:?}", person)
 }
-/*
+
 enum Form {
     Professional,
     Informative,
