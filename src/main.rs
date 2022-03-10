@@ -1,6 +1,9 @@
 use std::collections::HashMap;
 
-let mut book_reviews = HashMap::new();
+fn main() {
+    let mut book_reviews = HashMap::new();
+}
+
 
 #[cfg(test)]
 mod tests {
