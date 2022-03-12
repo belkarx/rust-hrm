@@ -17,7 +17,7 @@ fn init_person() {
     let person = Person {
         alias: get_string("Alias: "),
         name: 
-        main_contact: get_string("Main contact: ");,
+        main_contact: get_string("Main contact: "),
         other_contacts: Option<Vec<&'static str>>, //optional
         uses: Vec<&'static str>,
         skill: i16, //may be removed
