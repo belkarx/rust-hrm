@@ -20,7 +20,7 @@ fn init_person() -> Person {
         name: Some(get_string("Name [optional]: ")).filter(|s| s.len() > 0),
         main_contact: get_string("Main contact: "),
         other_contacts: {
-            let other_contacts:Option<Vec<String>> = Some(get_string("Other contacts (comma separated) [optional]: ").split(", ").map(|s| s.to_string()).collect()).filter(|s| s.len() > 0);
+            let other_contacts:Vec<String> = Some(get_string("Other contacts (comma separated) [optional]: ").split(", ").map(|s| s.to_string()).collect()).filter(|s| s.len() > 0);
             other_contacts
             /*if !other_contacts.is_empty() {
                 Some(other_contacts)
