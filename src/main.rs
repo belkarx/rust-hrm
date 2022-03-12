@@ -4,6 +4,8 @@ mod ui;
 use ui::tui;
 use utils::get_string;
 use serde::{Serialize, Deserialize};
+use cursive::views::{Dialog, TextView};
+use cursive::Cursive
 
 #[derive(Debug, Serialize, Deserialize)]
 struct Person {
@@ -41,9 +43,20 @@ fn init_person() -> Person {
 }
 
 fn main() {
-    let person = init_person();
+    //let person = init_person();
     println!("{:#?}", person);
-    tui().unwrap();
+    let mut siv = cursive::default();
+
+    // Creates a dialog with a single "Quit" button
+    siv.add_layer(Dialog::around(TextView::new("Hello Dialog!"))
+                         .title("Cursive")
+                         .button("Quit", |s| s.quit()));
+
+    // Starts the event loop.
+    siv.run();
+    
+
+    //tui().unwrap();
     //let mut book_reviews:HashMap<String, String> = HashMap::new();
 }
 
