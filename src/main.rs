@@ -14,7 +14,7 @@ struct Person {
 }
 
 fn init_person() {
-    let person = {
+    let person = Person {
         alias: get_string("Alias: "),
         name: 
         main_contact: get_string("Main contact: ");,
