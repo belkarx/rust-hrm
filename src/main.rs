@@ -5,9 +5,10 @@ use utils::get_string;
 fn main() {
     let alias = get_string("Alias: ");
     let name = get_string("Name [optional]: ");
+
     let main_contact = get_string("Main contact: ");
-    let contact_raw = get_string("Other contacts (comma separated) [optional]: ");
-    let contacts:Vec<&str> = contact_raw.split(", ").collect();
+    let other_contacts_raw = get_string("Other contacts (comma separated) [optional]: ");
+    let other_contacts:Vec<&str> = other_contacts_raw.split(", ").collect();
 
     let uses_raw = get_string("Uses (comma separated): ");
     let uses:Vec<&str> = uses_raw.split(", ").collect();
@@ -20,6 +21,9 @@ fn main() {
         println!("{}", name);
     }
     println!("{:#?}",contacts);
+    if !other_contacs.is_empty() {
+        println!("{}", name);
+    }
     println!("{:#?}",uses);
     println!("{}", skill);
     println!("{}", social);
