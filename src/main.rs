@@ -34,8 +34,10 @@ fn init_person() {
                 None
             }
         }
-            Option<Vec<&'static str>>, //optional
-        uses: Vec<&'static str>,
+        uses: {
+            let uses_raw = get_string("Uses (comma separated): ");
+            let uses:Vec<&str> = uses_raw.split(", ").collect();
+        },
         skill: i16, //may be removed
         social: i16,
         source: String
