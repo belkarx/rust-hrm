@@ -26,7 +26,7 @@ fn init_person() {
                 None
             }
         },
-        uses: get_string("Uses (comma separated): ").split(", ").collect();
+        uses: get_string("Uses (comma separated): ").split(", ").collect(),
 /* {
             let uses: Vec<&str> = get_string("Uses (comma separated): ").split(", ").collect();
             uses
