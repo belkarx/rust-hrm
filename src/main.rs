@@ -27,8 +27,7 @@ fn init_person() {
             }
         },
         uses: {
-            let uses: Vec<&str> = get_string("Uses (comma separated): ").split(", ").collect();;
-            let uses:Vec<&str> = uses_raw.split(", ").collect();
+            let uses: Vec<&str> = get_string("Uses (comma separated): ").split(", ").collect();
             uses
         },
         skill: get_string("Technical skill from 0 to 5: ").trim().parse::<i16>().unwrap(), //may be removed
