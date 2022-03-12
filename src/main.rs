@@ -23,10 +23,18 @@ fn init_person() {
             } else {
                 None
             }
-
         } 
         main_contact: get_string("Main contact: "),
-        other_contacts: Option<Vec<&'static str>>, //optional
+        other_contacts: {
+            let other_contacts_raw = get_string("Other contacts (comma separated) [optional]: ");
+            let other_contacts:Vec<&str> = other_contacts_raw.split(", ").collect();
+            if !other_contacs.is_empty() {
+                Some(name)
+            } else {
+                None
+            }
+        }
+            Option<Vec<&'static str>>, //optional
         uses: Vec<&'static str>,
         skill: i16, //may be removed
         social: i16,
