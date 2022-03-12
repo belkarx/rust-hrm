@@ -13,7 +13,7 @@ struct Person {
     source: String
 }
 
-fn init_person() {
+fn init_person() -> Person{
     Person {
         alias: get_string("Alias: "),
         name: Some(get_string("Name [optional]: ")).filter(|s| s.len() > 0),
