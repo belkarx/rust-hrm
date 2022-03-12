@@ -21,8 +21,7 @@ fn init_person() -> Person {
         main_contact: get_string("Main contact: "),
         other_contacts: {
             let other_contacts: Vec<String> = get_string("Other contacts (comma separated) [optional]: ").split(", ").map(|s| s.to_string()).collect();
-            println!("{}",other_contacts.len());
-            if other_contacts.len() > 0 {
+            if other_contacts[0].len() > 0 {
                 Some(other_contacts)
             } else { None }
             /*if !other_contacts.is_empty() {
