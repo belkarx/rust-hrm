@@ -7,7 +7,7 @@ struct Person {
     name: Option<String>, //optional
     main_contact: String,
     other_contacts: Option<Vec<String>>, //optional
-    uses: Vec<&'static str>,
+    uses: Vec<String>,
     skill: i16, //may be removed
     social: i16,
     source: String
