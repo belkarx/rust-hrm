@@ -6,7 +6,7 @@ struct Person {
     alias: String,
     name: String, //optional
     main_contact: String,
-    other_contacts: Vec<&str>, //optional
+    other_contacts: Vec<&'static str>, //optional
     uses: Vec<&'static str>,
     skill: i16, //may be removed
     social: i16,
