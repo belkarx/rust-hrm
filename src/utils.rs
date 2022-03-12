@@ -11,5 +11,4 @@ pub fn get_string() -> String {
         s.pop();
     }
     return s;
-    println!("You typed: {}",s);
 }
