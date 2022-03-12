@@ -13,6 +13,7 @@ struct Person {
     source: String
 }
 
+#[derive(Debug)]
 fn init_person() -> Person {
     Person {
         alias: get_string("Alias: "),
