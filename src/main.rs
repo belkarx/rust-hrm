@@ -33,7 +33,7 @@ fn init_person() {
             } else {
                 None
             }
-        }
+        },
         uses: {
             let uses_raw = get_string("Uses (comma separated): ");
             let uses:Vec<&str> = uses_raw.split(", ").collect();
