@@ -1,4 +1,4 @@
-pub fn get_string() {
+pub fn get_string() -> String {
     use std::io::{stdin,stdout,Write};
     let mut s = String::new();
     print!("Alias: ");
@@ -10,5 +10,6 @@ pub fn get_string() {
     if let Some('\r')=s.chars().next_back() {
         s.pop();
     }
+    return s;
     println!("You typed: {}",s);
 }
