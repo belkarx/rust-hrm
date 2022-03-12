@@ -6,14 +6,15 @@ struct Person {
     alias: String,
     name: String, //optional
     main_contact: String,
-    other_contacts: Vec<&'static str>, //optional
+    other_contacts: Option<Vec<&'static str>>, //optional
     uses: Vec<&'static str>,
     skill: i16, //may be removed
     social: i16,
     source: String
 }
 
-fn main() {
+fn init_subject() {
+    
     let alias = get_string("Alias: ");
     let name = get_string("Name [optional]: ");
 
@@ -41,6 +42,10 @@ fn main() {
     println!("{}", skill);
     println!("{}", social);
     println!("{}", source);
+}
+
+fn main() {
+
     //let mut book_reviews:HashMap<String, String> = HashMap::new();
 }
 
