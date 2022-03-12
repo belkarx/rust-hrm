@@ -14,11 +14,11 @@ struct Person {
 }
 
 fn init_person() {
-    Person {
+    let person = Person {
         alias: get_string("Alias: "),
         name: Some(get_string("Name [optional]: ")).filter(|n| n.len() > 0),
         main_contact: get_string("Main contact: "),
-        other_contacts:
+        other_contacts: {
             let other_contacts_raw = get_string("Other contacts (comma separated) [optional]: ");
             let other_contacts:Vec<&str> = other_contacts_raw.split(", ").collect();
             if !other_contacts.is_empty() {
@@ -26,7 +26,7 @@ fn init_person() {
             } else {
                 None
             }
-        ,
+        },
         uses: {
             let uses_raw = get_string("Uses (comma separated): ");
             let uses:Vec<&str> = uses_raw.split(", ").collect();
@@ -37,7 +37,6 @@ fn init_person() {
         source: get_string("Where did you find this person (IRL, Discord, Reddit, School, etc): ")
     };
 }
-
 fn main() {
 
     //let mut book_reviews:HashMap<String, String> = HashMap::new();
