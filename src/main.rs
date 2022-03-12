@@ -3,7 +3,7 @@ mod utils;
 
 fn main() {
     let x = utils::get_string();
-    println!("%s", x);
+    println!("{}", x);
     //let mut book_reviews:HashMap<String, String> = HashMap::new();
 }
 
