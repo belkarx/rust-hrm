@@ -4,7 +4,7 @@ use utils::get_string;
 
 struct Person {
     alias: String,
-    name: String, //optional
+    name: Option<String>, //optional
     main_contact: String,
     other_contacts: Option<Vec<&'static str>>, //optional
     uses: Vec<&'static str>,
