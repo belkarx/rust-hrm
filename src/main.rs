@@ -2,7 +2,7 @@
 mod utils;
 use utils::get_string;
 
-#[derive(Debug)]
+#[derive(Debug, Serialize, Deserialize)]
 struct Person {
     alias: String,
     name: Option<String>, //optional
