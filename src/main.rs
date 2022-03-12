@@ -1,6 +1,5 @@
 use std::collections::HashMap;
-mod utils;
-use crate::utils::utils::get_subject_info;
+pub mod utils;
 
 fn main() {
     utils::get_subject_info();
