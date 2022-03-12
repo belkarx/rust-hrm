@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 
 fn main() {
-    let mut book_reviews:HashMap<String, String> = HashMap::new();
+    //let mut book_reviews:HashMap<String, String> = HashMap::new();
 }
 
 
