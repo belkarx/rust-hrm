@@ -35,7 +35,7 @@ fn init_person() {
         skill: get_string("Technical skill from 0 to 5: ").trim().parse::<i16>().unwrap(), //may be removed
         social: get_string("Social usefulness from 0 to 5: ").trim().parse::<i16>().unwrap(),
         source: get_string("Where did you find this person (IRL, Discord, Reddit, School, etc): ")
-    }
+    };
 
     let alias = get_string("Alias: ");
     let name = get_string("Name [optional]: ");
