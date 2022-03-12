@@ -2,6 +2,17 @@
 mod utils;
 use utils::get_string;
 
+struct Person {
+    alias: String,
+    name: String, //optional
+    main_contact: String,
+    other_contacts: Vec<&str>, //optional
+    uses: Vec<&str>,
+    skill: i16, //may be removed
+    social: i16,
+    source: String
+}
+
 fn main() {
     let alias = get_string("Alias: ");
     let name = get_string("Name [optional]: ");
