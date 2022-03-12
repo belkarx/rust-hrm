@@ -13,6 +13,7 @@ fn main() {
     
     println!("{}", alias);
     println!("{:#?}",contacts);
+    println!("{:#?}",uses);
     //let mut book_reviews:HashMap<String, String> = HashMap::new();
 }
 
