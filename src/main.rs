@@ -29,7 +29,7 @@ fn init_person() {
             let other_contacts_raw = get_string("Other contacts (comma separated) [optional]: ");
             let other_contacts:Vec<&str> = other_contacts_raw.split(", ").collect();
             if !other_contacts.is_empty() {
-                Some(name)
+                Some(other_contacs)
             } else {
                 None
             }
