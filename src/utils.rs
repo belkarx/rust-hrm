@@ -10,5 +10,5 @@ pub fn get_string(prompt: &'static str) -> String {
     if let Some('\r')=s.chars().next_back() {
         s.pop();
     }*/
-   return s.pop();
+   s = s.pop();
 }
