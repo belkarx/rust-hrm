@@ -1,7 +1,7 @@
 //use std::collections::HashMap;
 mod utils;
 use utils::get_string;
-use Serde::{Serialize, Deserialize};
+use serde::{Serialize, Deserialize};
 
 #[derive(Debug, Serialize, Deserialize)]
 struct Person {
@@ -37,6 +37,7 @@ fn init_person() -> Person {
         source: get_string("Where did you find this person (IRL, Discord, Reddit, School, etc): ")
     }
 }
+
 fn main() {
     let person = init_person();
     println!("{:#?}", person);
