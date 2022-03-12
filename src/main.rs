@@ -16,6 +16,7 @@ fn main() {
     println!("{}", alias);
     println!("{:#?}",contacts);
     println!("{:#?}",uses);
+    println!("{}", skill);
     //let mut book_reviews:HashMap<String, String> = HashMap::new();
 }
 
