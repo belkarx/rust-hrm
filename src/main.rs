@@ -43,7 +43,7 @@ fn init_person() -> Person {
 fn main() {
     let person = init_person();
     println!("{:#?}", person);
-    utils::tui()
+    tui();
     //let mut book_reviews:HashMap<String, String> = HashMap::new();
 }
 
