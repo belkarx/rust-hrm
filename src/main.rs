@@ -2,7 +2,7 @@ use std::collections::HashMap;
 mod utils;
 
 fn main() {
-    utils::get
+    utils::get_subject_info();
     //let mut book_reviews:HashMap<String, String> = HashMap::new();
 }
 
