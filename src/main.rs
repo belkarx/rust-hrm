@@ -26,10 +26,11 @@ fn init_person() {
                 None
             }
         },
-        uses: {
+        uses: get_string("Uses (comma separated): ").split(", ").collect();
+/* {
             let uses: Vec<&str> = get_string("Uses (comma separated): ").split(", ").collect();
             uses
-        },
+        },*/
         skill: get_string("Technical skill from 0 to 5: ").trim().parse::<i16>().unwrap(), //may be removed
         social: get_string("Social usefulness from 0 to 5: ").trim().parse::<i16>().unwrap(),
         source: get_string("Where did you find this person (IRL, Discord, Reddit, School, etc): ")
