@@ -17,7 +17,7 @@ struct Person {
 fn init_person() -> Person {
     Person {
         alias: get_string("Alias: "),
-        name: Some(get_string("Name [optional]: ")).filter(|s| s.len() > 0),
+        name: Some(get_string("Name [optional]: ")).filter(|s| !s.is_empty()),
         main_contact: get_string("Main contact: "),
         other_contacts: {
             let other_contacts:Vec<String> = get_string("Other contacts (comma separated) [optional]: ").split(", ").map(|s| s.to_string()).collect();
