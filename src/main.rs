@@ -8,7 +8,7 @@ fn main() {
     let contact_raw:Vec<&str> = get_string("Contact info (comma separated): ").split(", ").collect();
     //let contacts:Vec<&str> = contact_raw.split(", ").collect();
 
-    let uses_raw = get_string("Uses (comma separated): ");
+    //let uses_raw = get_string("Uses (comma separated): ");
     //let contacts:Vec<&str> = contact_raw.split(", ").collect();
     
     println!("{}", alias);
