@@ -20,7 +20,6 @@ fn init_person() {
         main_contact: get_string("Main contact: "),
         other_contacts: {
             let other_contacts:Vec<&str> = get_string("Other contacts (comma separated) [optional]: ").split(", ").collect();
-            //let other_contacts:Vec<&str> = other_contacts_raw.split(", ").collect();
             if !other_contacts.is_empty() {
                 Some(other_contacts)
             } else {
@@ -28,7 +27,7 @@ fn init_person() {
             }
         },
         uses: {
-            let uses_raw = get_string("Uses (comma separated): ");
+            let uses: Vec<&str> = get_string("Uses (comma separated): ").split(", ").collect();;
             let uses:Vec<&str> = uses_raw.split(", ").collect();
             uses
         },
