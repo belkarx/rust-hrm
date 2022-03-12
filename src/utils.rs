@@ -11,4 +11,5 @@ pub fn get_string(prompt: &'static str) -> String {
         s.pop();
     }*/
     s.pop();
+    s
 }
