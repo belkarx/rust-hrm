@@ -1,7 +1,7 @@
-pub fn get_string(prompt: &&'static str) -> String {
+pub fn get_string(prompt: &'static str) -> String {
     use std::io::{stdin,stdout,Write};
     let mut s = String::new();
-    print!(&prompt);
+    print!(prompt);
     let _=stdout().flush();
     stdin().read_line(&mut s).expect("Did not enter a correct string");
     if let Some('\n')=s.chars().next_back() {
