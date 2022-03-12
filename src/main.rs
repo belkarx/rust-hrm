@@ -11,7 +11,7 @@ fn main() {
     let uses_raw = get_string("Uses (comma separated): ");
     let uses:Vec<&str> = uses_raw.split(", ").collect();
 
-    n = get_input().trim().parse::<i64>().unwrap();
+    n = get_string().trim().parse::<i64>().unwrap();
     
     println!("{}", alias);
     println!("{:#?}",contacts);
