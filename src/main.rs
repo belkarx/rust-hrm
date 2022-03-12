@@ -11,7 +11,7 @@ fn main() {
     let uses_raw = get_string("Uses (comma separated): ");
     let uses:Vec<&str> = uses_raw.split(", ").collect();
 
-    let n = get_string("Technical skill from 0 to 10").trim().parse::<i64>().unwrap();
+    let skill = get_string("Technical skill from 0 to 10").trim().parse::<i64>().unwrap();
     
     println!("{}", alias);
     println!("{:#?}",contacts);
