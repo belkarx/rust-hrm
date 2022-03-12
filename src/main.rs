@@ -30,7 +30,7 @@ fn init_person() -> Person {
         skill: get_string("Technical skill from 0 to 5: ").trim().parse::<i16>().expect("Enter a number lol"), //may be removed
         social: get_string("Social usefulness from 0 to 5: ").trim().parse::<i16>().expect("Enter a number lol"),
         source: get_string("Where did you find this person (IRL, Discord, Reddit, School, etc): ")
-    };
+    }
 }
 fn main() {
     let person = init_person();
