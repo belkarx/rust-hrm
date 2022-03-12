@@ -1,7 +1,8 @@
 use std::collections::HashMap;
-mod utils
+mod utils;
 
 fn main() {
+    utils::get
     //let mut book_reviews:HashMap<String, String> = HashMap::new();
 }
 
