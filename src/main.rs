@@ -6,7 +6,6 @@ fn main() {
     let alias = get_string("Alias: ");
     
     let contact_raw = get_string("Contact info (comma separated): ").split(", ").collect();
-;
     //let contacts:Vec<&str> = contact_raw.split(", ").collect();
 
     let uses_raw = get_string("Uses (comma separated): ");
