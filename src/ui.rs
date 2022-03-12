@@ -1,21 +1,41 @@
-use rand::{thread_rng, Rng};
-use std::io;
-use std::io::Read;
-use std::time::Instant;
-use termion::{async_stdin, event::Key, input::TermRead, raw::IntoRawMode};
-use tui::backend::TermionBackend;
-use tui::layout::{Constraint, Direction, Layout};
-use tui::style::{Color, Style};
-use tui::text::Spans;
-use tui::widgets::{Block, Borders, Paragraph};
-use tui::Terminal;
-
-use crossterm::{terminal, event}
-    event::{self, Event as CEvent, KeyCode},
-    terminal::{disable_raw_mode, enable_raw_mode},
+use std::{io, thread, time::Duration};
+use tui::{
+    backend::CrosstermBackend,
+    widgets::{Widget, Block, Borders},
+    layout::{Layout, Constraint, Direction},
+    Terminal
+};
+use crossterm::{
+    event::{self, DisableMouseCapture, EnableMouseCapture, Event, KeyCode},
+    execute,
+    terminal::{disable_raw_mode, enable_raw_mode, EnterAlternateScreen, LeaveAlternateScreen},
 };
 
-pub fn tui() {
-    crossterm::terminal::enable_raw_mode()?;
+pub fn tui() -> Result<(), io::Error> {
+    enable_raw_mode()?;
+    let mut stdout = io::stdout();
+    execute!(stdout, EnterAlternateScreen, EnableMouseCapture)?;
+    let backend = CrosstermBackend::new(stdout);
+    let mut terminal = Terminal::new(backend)?;
 
+    terminal.draw(|f| {
+        let size = f.size();
+        let block = Block::default()
+            .title("Block")
+            .borders(Borders::ALL);
+        f.render_widget(block, size);
+    })?;
+
+    thread::sleep(Duration::from_millis(5000));
+
+    // restore terminal
+    disable_raw_mode()?;
+    execute!(
+        terminal.backend_mut(),
+        LeaveAlternateScreen,
+        DisableMouseCapture
+    )?;
+    terminal.show_cursor()?;
+
+    Ok(())
 }
