@@ -7,7 +7,7 @@ struct Person {
     name: Option<String>, //optional
     main_contact: String,
     other_contacts: Option<Vec<&'static str>>, //optional
-    uses: Vec<String>,
+    uses: Vec<&str>,
     skill: i16, //may be removed
     social: i16,
     source: String
@@ -26,11 +26,10 @@ fn init_person() {
                 None
             }
         },
-        uses: get_string("Uses (comma separated): ").split(", ").collect(),
-/* {
+        uses: {
             let uses: Vec<&str> = get_string("Uses (comma separated): ").split(", ").collect();
             uses
-        },*/
+        },
         skill: get_string("Technical skill from 0 to 5: ").trim().parse::<i16>().unwrap(), //may be removed
         social: get_string("Social usefulness from 0 to 5: ").trim().parse::<i16>().unwrap(),
         source: get_string("Where did you find this person (IRL, Discord, Reddit, School, etc): ")
