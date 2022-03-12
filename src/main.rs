@@ -16,7 +16,7 @@ fn main() {
     
     println!("{}", alias);
     if !name.is_empty() {
-        println!("{}", name)
+        println!("{}", name);
     }
     println!("{:#?}",contacts);
     println!("{:#?}",uses);
