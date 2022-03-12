@@ -16,23 +16,12 @@ struct Person {
 fn init_person() {
     let person = Person {
         alias: get_string("Alias: "),
-        name: {
-            let name = get_string("Name [optional]: ");
-            if !name.is_empty() {
-                Some(name)
-            } else {
-                None
-            }
-        },
+        name: Some(get_string("Name [optional]: ")).filter(|n| n.len() > 0),
         main_contact: get_string("Main contact: "),
         other_contacts: {
             let other_contacts_raw = get_string("Other contacts (comma separated) [optional]: ");
-            let other_contacts:Vec<&str> = other_contacts_raw.split(", ").collect();
-            if !other_contacts.is_empty() {
-                Some(other_contacts)
-            } else {
-                None
-            }
+            let other_contacts:Vec<&str> = other_contacts_raw.split(", ").collect().filter(|v| v.len() > 0),
+            
         },
         uses: {
             let uses_raw = get_string("Uses (comma separated): ");
