@@ -1,5 +1,6 @@
 //use std::collections::HashMap;
 mod utils;
+mod ui
 use utils::get_string;
 use serde::{Serialize, Deserialize};
 
@@ -41,6 +42,7 @@ fn init_person() -> Person {
 fn main() {
     let person = init_person();
     println!("{:#?}", person);
+    utils:tui()
     //let mut book_reviews:HashMap<String, String> = HashMap::new();
 }
 
