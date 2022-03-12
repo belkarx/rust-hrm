@@ -19,7 +19,7 @@ fn init_person() {
         name: Some(get_string("Name [optional]: ")).filter(|s| s.len() > 0),
         main_contact: get_string("Main contact: "),
         other_contacts: {
-            let other_contacts:Vec<&'static str> = get_string("Other contacts (comma separated) [optional]: ").split(", ").collect();
+            let other_contacts:Vec<&'static str> = &get_string("Other contacts (comma separated) [optional]: ").split(", ").collect();
             if !other_contacts.is_empty() {
                 Some(other_contacts)
             } else {
