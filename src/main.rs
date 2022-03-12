@@ -22,6 +22,7 @@ fn main() {
     println!("{:#?}",contacts);
     println!("{:#?}",uses);
     println!("{}", skill);
+    println!("{}", social);
     //let mut book_reviews:HashMap<String, String> = HashMap::new();
 }
 
