@@ -1,6 +1,6 @@
 //use std::collections::HashMap;
 mod utils;
-mod ui
+mod ui;
 use utils::get_string;
 use serde::{Serialize, Deserialize};
 
