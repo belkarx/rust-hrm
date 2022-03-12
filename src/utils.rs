@@ -1,4 +1,4 @@
-pub fn get_subject_info() {
+pub fn get_string() {
     use std::io::{stdin,stdout,Write};
     let mut s = String::new();
     print!("Alias: ");
