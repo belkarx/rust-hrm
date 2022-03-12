@@ -2,6 +2,7 @@
 mod utils;
 use utils::get_string;
 
+#[derive(Debug)]
 struct Person {
     alias: String,
     name: Option<String>, //optional
@@ -13,7 +14,6 @@ struct Person {
     source: String
 }
 
-#[derive(Debug)]
 fn init_person() -> Person {
     Person {
         alias: get_string("Alias: "),
