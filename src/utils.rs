@@ -1,4 +1,4 @@
-pub fn get_string(prompt: static &str) -> String {
+pub fn get_string(prompt: &str) -> String {
     use std::io::{stdin,stdout,Write};
     let mut s = String::new();
     print!("Alias: ");
