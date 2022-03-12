@@ -38,8 +38,8 @@ fn init_person() {
             let uses_raw = get_string("Uses (comma separated): ");
             let uses:Vec<&str> = uses_raw.split(", ").collect();
         },
-        skill: i16, //may be removed
-        social: i16,
+        skill: get_string("Technical skill from 0 to 5: ").trim().parse::<i16>().unwrap(), //may be removed
+        social: get_string("Social usefulness from 0 to 5: ").trim().parse::<i16>().unwrap(),
         source: String
     }
     let alias = get_string("Alias: ");
