@@ -5,7 +5,7 @@ use ui::tui;
 use utils::get_string;
 use serde::{Serialize, Deserialize};
 use cursive::views::{Dialog, TextView};
-use cursive::Cursive
+use cursive::Cursive;
 
 #[derive(Debug, Serialize, Deserialize)]
 struct Person {
