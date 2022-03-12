@@ -1,4 +1,5 @@
-fn get_subject_info() {
+mod utils {
+    fn get_subject_info() {
     use std::io::{stdin,stdout,Write};
     let mut s = String::new();
     print!("Alias: ");
@@ -11,5 +12,6 @@ fn get_subject_info() {
         s.pop();
     }
     println!("You typed: {}",s);
+}
 }
 
