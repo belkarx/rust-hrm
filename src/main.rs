@@ -34,7 +34,7 @@ fn init_person() {
 }
 fn main() {
     let person = init_person();
-    println!("{:#?}", Person)
+    println!("{:#?}", Person);
     //let mut book_reviews:HashMap<String, String> = HashMap::new();
 }
 
