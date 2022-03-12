@@ -3,7 +3,7 @@ mod utils;
 
 fn main() {
     let alias = utils::get_string("Alias: ");
-    let contact:Vec<&str> = utils::get_string("Contact info (comma separated): ").split(", ").collect();
+    let contacts:Vec<&str> = utils::get_string("Contact info (comma separated): ").split(", ").collect();
     println!("{}", alias);
     //let mut book_reviews:HashMap<String, String> = HashMap::new();
 }
