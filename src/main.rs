@@ -2,7 +2,7 @@
 mod utils;
 
 fn main() {
-    let x = utils::get_subject_info();
+    let x = utils::get_string();
     //let mut book_reviews:HashMap<String, String> = HashMap::new();
 }
 
