@@ -15,7 +15,9 @@ fn main() {
 
     let skill = get_string("Technical skill from 0 to 5: ").trim().parse::<i16>().unwrap();
     let social = get_string("Social usefulness from 0 to 5: ").trim().parse::<i16>().unwrap();
-    
+    let source = get_string("Where did you find this person (IRL, Discord, Reddit, School, etc): ");
+
+
     println!("{}", alias);
     if !name.is_empty() {
         println!("{}", name);
@@ -27,6 +29,7 @@ fn main() {
     println!("{:#?}",uses);
     println!("{}", skill);
     println!("{}", social);
+    println!();
     //let mut book_reviews:HashMap<String, String> = HashMap::new();
 }
 
