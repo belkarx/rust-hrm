@@ -20,8 +20,8 @@ fn main() {
     if !name.is_empty() {
         println!("{}", name);
     }
-    println!("{:#?}",contacts);
-    if !other_contacs.is_empty() {
+    println!("{:#?}",main_contact);
+    if !other_contacts.is_empty() {
         println!("{}", name);
     }
     println!("{:#?}",uses);
