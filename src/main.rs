@@ -23,7 +23,7 @@ fn init_person() {
             } else {
                 None
             }
-        } 
+        },
         main_contact: get_string("Main contact: "),
         other_contacts: {
             let other_contacts_raw = get_string("Other contacts (comma separated) [optional]: ");
