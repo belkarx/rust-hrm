@@ -12,7 +12,7 @@ fn main() {
     //let contacts:Vec<&str> = contact_raw.split(", ").collect();
     
     println!("{}", alias);
-    //println!("{:#?}",contacts);
+    println!("{:#?}",contact_raw);
     //let mut book_reviews:HashMap<String, String> = HashMap::new();
 }
 
