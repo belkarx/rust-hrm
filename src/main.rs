@@ -15,7 +15,7 @@ struct Person {
 
 fn init_person() {
     let person = {
-        alias: get_string("Alias: ");,
+        alias: get_string("Alias: "),
         name: Option<String>, //optional
         main_contact: String,
         other_contacts: Option<Vec<&'static str>>, //optional
