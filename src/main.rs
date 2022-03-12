@@ -1,10 +1,12 @@
 //use std::collections::HashMap;
 mod utils;
+use utils::get_string;
 
 fn main() {
-    let alias = utils::get_string("Alias: ");
-    let contact_raw = utils::get_string("Contact info (comma separated): ");
+    let alias = get_string("Alias: ");
+    let contact_raw = get_string("Contact info (comma separated): ");
     let contacts:Vec<&str> = contact_raw.split(", ").collect();
+    let uses = get_string("Uses (comma separated): ");
     println!("{}", alias);
     println!("{:#?}",contacts);
     //let mut book_reviews:HashMap<String, String> = HashMap::new();
