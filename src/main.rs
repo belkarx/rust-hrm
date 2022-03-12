@@ -1,5 +1,5 @@
 use std::collections::HashMap;
-pub mod utils;
+mod utils;
 
 fn main() {
     utils::get_subject_info();
