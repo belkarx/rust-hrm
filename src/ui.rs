@@ -16,6 +16,6 @@ use crossterm::{terminal, event}
 };
 
 pub fn tui() {
-    crossterm::terminal::enable_raw_mode();
+    crossterm::terminal::enable_raw_mode()?;
 
 }
