@@ -15,6 +15,9 @@ fn main() {
     let skill = get_string("Technical skill from 0 to 10").trim().parse::<i64>().unwrap();
     
     println!("{}", alias);
+    if !name.is_empty() {
+        println!("{}", name)
+    }
     println!("{:#?}",contacts);
     println!("{:#?}",uses);
     println!("{}", skill);
