@@ -4,9 +4,9 @@ use utils::get_string;
 
 fn main() {
     let alias = get_string("Alias: ");
-    let name = get_string("Name: ");
-    
-    let contact_raw = get_string("Contact info (comma separated): ");
+    let name = get_string("Name [optional]: ");
+    let main_contact = get_string("Main contact: ");
+    let contact_raw = get_string("Other contacts (comma separated) [optional]: ");
     let contacts:Vec<&str> = contact_raw.split(", ").collect();
 
     let uses_raw = get_string("Uses (comma separated): ");
