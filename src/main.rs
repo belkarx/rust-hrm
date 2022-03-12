@@ -33,7 +33,7 @@ fn init_person() {
     };
 }
 fn main() {
-
+    init_person();
     //let mut book_reviews:HashMap<String, String> = HashMap::new();
 }
 
