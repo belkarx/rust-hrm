@@ -120,7 +120,7 @@ fn main() {
     let chosen = by_alias(&hm);
     let p = hm.get_mut(&chosen).unwrap();
     println!("{:#?}", p);
-    let field = get_string("choose a field to alter: "); 
+    let field = get_string("choose a (TEXT) field to alter: "); 
     let value = get_string("what value are you changing it to: ");
         match &field[..] {
             "alias" => p.alias = value,
