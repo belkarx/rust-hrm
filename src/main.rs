@@ -60,8 +60,8 @@ impl Person {
     }
     fn del_uses(&mut self) {
         println!("{:#?}", self.uses);
-        for u in self.uses.iter().enumerate() {
-            println!("{}")
+        for (i, u) in self.uses.iter().enumerate() {
+            println!("{} | {}", i+1, u);
         }
         let which = get_string("Which use would you like to delete?");
         self.uses = get_string("Uses (comma separated): ").split(", ").map(|s| s.to_string()).collect();
