@@ -6,6 +6,7 @@ use serde::{Serialize, Deserialize};
 //use cursive::Cursive;
 //use cursive::traits::*;
 use std::fs;
+use serde_json::Map;
 
 #[derive(Debug, Serialize, Deserialize)]
 struct Person {
