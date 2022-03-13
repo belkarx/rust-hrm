@@ -21,9 +21,8 @@ struct Person {
 }
 
 fn init_person() -> Person {
-    let p: Person = {};
     Person {
-        alias: ("Alias: "),
+        alias: set_alias(),
         name: Some(get_string("Name [optional]: ")).filter(|s| s.len() > 0),
         main_contact: get_string("Main contact: "),
         other_contacts: {
