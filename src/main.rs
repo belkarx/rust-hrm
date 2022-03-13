@@ -43,9 +43,9 @@ fn init_person() -> Person {
     }
 }
 
-fn write_to_file(p: Vec<Person>) {
+/*fn write_to_file(p: Vec<Person>) {
     fs::write("data.json", serde_json::to_string(&p).unwrap()).unwrap();
-}
+}*/
 
 fn write_to_file_as_hashmap(p: HashMap<String, Person>) {
     fs::write("data.json", serde_json::to_string(&p).unwrap()).unwrap();
@@ -64,8 +64,7 @@ fn read_from_file_as_hashmap() -> HashMap<String, Person> {
 }
 
 fn main() {
-    read_from_file_as_hashmap();
-    let mut vec = read_from_file();
+    //let mut vec = read_from_file();
     let mut hm: HashMap<String, Person> = read_from_file_as_hashmap();
 
     loop {
@@ -77,7 +76,7 @@ fn main() {
     
 
     write_to_file_as_hashmap(hm);
-    read_from_file();
+    read_from_file_as_hashmap();
 
 }
 
