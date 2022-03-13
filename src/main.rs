@@ -60,7 +60,7 @@ impl Person {
     }
     fn del_uses(&mut self) {
         println!("{:#?}", self.uses);
-        for u in uses {
+        for u in self.uses {
 
         }
         let which = get_string("Which use would you like to delete?");
