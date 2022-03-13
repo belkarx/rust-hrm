@@ -47,7 +47,7 @@ fn write_to_file(p: Person) {
 }
 
 fn read_from_file() {
-    let data: Vec<Person> = serde_json::from_str(&fs::read_to_string("address.txt").unwrap()).unwrap();
+    let data: Vec<Person> = serde_json::from_str(&fs::read_to_string("data.json").unwrap()).unwrap();
     println!("{:#?}", data);
 }
 
@@ -58,7 +58,6 @@ fn main() {
     siv.add_global_callback('q', |e| e.quit());
     siv.clear_global_callbacks('q');
     let mut panes = LinearLayout::vertical();
-    panes.add_child(TextView::new("preview")
                     .fixed_size((50, 25));
 
     // Creates a dialog with a single "Quit" button
