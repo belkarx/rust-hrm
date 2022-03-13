@@ -58,7 +58,7 @@ fn main() {
         let person = init_person();
         println!("{:#?}", person);
         vec.push(person);
-        if get_string("another?").contains("n") {break;}
+        if get_string("another? ").contains("n") {break;}
     };
     
 
