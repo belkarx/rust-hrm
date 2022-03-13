@@ -73,8 +73,9 @@ fn by_alias(hm: &HashMap<String, Person>) -> String {
 
 fn by_field(mut p: &Person) {
     println!("{:#?}", p);
-   
-    p.get_string("choose a field to modify: ");
+    match get_string("choose a field to alter: ") {
+
+    };
 }
 
 fn main() {
@@ -96,6 +97,9 @@ fn main() {
     read_from_file_as_hashmap();
 
 }
+
+
+
 
 #[cfg(test)]
 mod tests {
