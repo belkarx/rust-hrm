@@ -42,8 +42,8 @@ fn init_person() -> Person {
     }
 }
 
-fn write_to_file(p: Person) {
-
+fn write_to_file(p: Vec<Person>) {
+    fs::write("data.json", serde_json.to_string(p))
 }
 
 fn read_from_file() {
