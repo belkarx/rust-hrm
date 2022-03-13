@@ -63,7 +63,7 @@ fn read_from_file_as_hashmap() -> HashMap<String, Person> {
     data
 }
 
-fn by_alias(mut hm: &HashMap<String, Person>) -> String {
+fn by_alias(hm: &HashMap<String, Person>) -> String {
     for key in hm.keys() {
         println!("{}", key);
     };
