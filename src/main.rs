@@ -21,7 +21,7 @@ struct Person {
 }
 
 fn init_person() -> Person {
-    let p: Person = {}''
+    let p: Person = {};
     Person {
         alias: ("Alias: "),
         name: Some(get_string("Name [optional]: ")).filter(|s| s.len() > 0),
