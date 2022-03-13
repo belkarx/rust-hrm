@@ -46,7 +46,7 @@ fn write_to_file(p: Person) {
 }
 
 fn read_from_file() {
-    let raw = fs::read_to_string("address.txt")?;
+    let raw = fs::read_to_string("address.txt").unwrap();
 }
 
 fn main() {
