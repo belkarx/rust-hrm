@@ -63,8 +63,8 @@ impl Person {
         for (i, u) in self.uses.iter().enumerate() {
             println!("{} | {}", i+1, u);
         }
-        let which = get_string("Which use would you like to delete?").trim().parse::<i16>().expect("Enter a number lol");
-        self.uses = get_string("Uses (comma separated): ").split(", ").map(|s| s.to_string()).collect();
+        let idx = get_string("Which use would you like to delete?").trim().parse::<i16>().expect("Enter a number lol")-1;
+        self.uses.remove(idx);
     }
 }
 
