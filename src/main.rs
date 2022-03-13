@@ -103,7 +103,7 @@ fn by_alias(hm: &HashMap<String, Person>) -> String {
     println!();
     get_string("choose an alias to alter: ")
 }
-
+/*
 fn by_field(mut p: &Person) {
     println!("{:#?}", p);
     let field = get_string("choose a field to alter: "); 
@@ -112,7 +112,7 @@ fn by_field(mut p: &Person) {
         "alias" => {p.alias = value},
         
     };
-}
+}8?
 
 fn main() {
     //let mut vec = read_from_file();
