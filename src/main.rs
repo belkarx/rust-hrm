@@ -85,7 +85,7 @@ fn main() {
     //let mut vec = read_from_file();
     let mut hm: HashMap<String, Person> = read_from_file_as_hashmap();
     let chosen = by_alias(&hm);
-    by_field(hm.get(&chosen).unwrap());
+    by_field(hm.get_mut(&chosen).unwrap());
     let &mut p: &Person = hm.get(&chosen).unwrap();
     println!("{:#?}", p);
         let field = get_string("choose a field to alter: "); 
