@@ -53,9 +53,14 @@ fn read_from_file() -> Vec<Person> {
 }
 
 fn main() {
-    if get_string("another?").contains("n") {break;}
-    let person = init_person();
-    println!("{:#?}", person);
+    let mut vec = Vec::new();
+    loop {
+        if get_string("another?").contains("n") {break;}
+        let person = init_person();
+        println!("{:#?}", person);
+    };
+    
+
     write_to_file
 
 }
