@@ -2,9 +2,9 @@
 mod utils;
 use utils::get_string;
 use serde::{Serialize, Deserialize};
-use cursive::views::{Dialog, TextView, LinearLayout, SelectView};
-use cursive::Cursive;
-use cursive::traits::*;
+//use cursive::views::{Dialog, TextView, LinearLayout, SelectView};
+//use cursive::Cursive;
+//use cursive::traits::*;
 use std::fs;
 
 #[derive(Debug, Serialize, Deserialize)]
