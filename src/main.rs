@@ -121,8 +121,8 @@ fn main() {
     let p = hm.get_mut(&chosen).unwrap();
     println!("{:#?}", p);
     let field = get_string("choose a (TEXT) field to alter: "); 
-    /*let value = get_string("what value are you changing it to: ");
-        match &field[..] {
+    let value = get_string("what value are you changing it to: ");
+    /*    match &field[..] {
             //"alias" => p.alias = value, //alters hashmap key
             "name" => p.name = value,
             "" => p.name = value,
