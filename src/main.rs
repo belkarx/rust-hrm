@@ -113,16 +113,20 @@ fn main() {
     let mut hm: HashMap<String, Person> = read_from_file_as_hashmap();
     let chosen = by_alias(&hm);
     let p = hm.get_mut(&chosen).unwrap();
+    
+    match get_string("choose a field to alter: ") {
+        "name" => p.set_name(),
+        "other_contacts" => p.add_other_contacts(),
+        "uses" => {
+            if get_string("Would you like to add or delete uses: ").contains("a") {
+                p.add_uses()
+            } else { p.del_uses() }
+        },
+    } 
+
+
     println!("{:#?}", p);
-    let _field = get_string("choose a (TEXT) field to alter: "); 
-    let _value = get_string("what value are you changing it to: ");
-    /*    match &field[..] {
-            //"alias" => p.alias = value, //alters hashmap key
-            "name" => p.name = value,
-            "" => p.name = value,
-            _ => panic!("Lol field doesn't exist /shrug")
-        };
-*/
+    
 
     //hm.remove(&chosen);
 
