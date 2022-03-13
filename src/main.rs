@@ -55,7 +55,7 @@ impl Person {
     }
     fn add_other_contacts(&mut self) {
         if self.other_contacts {
-            self.other_contacts.push(get_string("Other contacts (comma separated): ").split(", ").map(|s| s.to_string()).collect())
+            self.other_contacts.append(get_string("Other contacts (comma separated): ").split(", ").map(|s| s.to_string()).collect());
         }
         let other_contacts: Vec<String> = get_string("Other contacts (comma separated): ").split(", ").map(|s| s.to_string()).collect();
             if other_contacts[0].len() > 0 {
