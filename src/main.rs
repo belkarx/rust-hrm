@@ -1,4 +1,4 @@
-//use std::collections::HashMap;
+use std::collections::HashMap;
 mod utils;
 use utils::get_string;
 use serde::{Serialize, Deserialize};
@@ -47,6 +47,12 @@ fn write_to_file(p: Vec<Person>) {
 }
 
 fn read_from_file() -> Vec<Person> {
+    let data: Vec<Person> = serde_json::from_str(&fs::read_to_string("data.json").unwrap()).unwrap();
+    println!("{:#?}", data);
+    data
+}
+
+fn read_from_file_as_hashmap() -> HashMap<String, Person> {
     let data: Vec<Person> = serde_json::from_str(&fs::read_to_string("data.json").unwrap()).unwrap();
     println!("{:#?}", data);
     data
