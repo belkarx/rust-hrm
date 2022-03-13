@@ -55,7 +55,12 @@ impl Person {
     }
     fn add_other_contacts(&mut self) {
         let mut added_contacts: Vec<String> = get_string("Contacts to add: ").split(", ").map(|s| s.to_string()).collect();
-        self.other_contacts.unwrap_or(added_contacts.clone()).append(&mut added_contacts);
+        if self.other_contacts.unwrap() != None {
+            self.other_contacts = self.other_contacts.unwrap().append(&mut added_contacts);
+        } else {
+            self.other_contacts = Some(added_contacts)l
+        }
+        self.other_contacts.unwrap_or(Some(added_contacts.clone()).append(&mut added_contacts);
     }
     fn set_uses(&mut self) {
         self.uses = get_string("Uses (comma separated): ").split(", ").map(|s| s.to_string()).collect();
