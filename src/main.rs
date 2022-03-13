@@ -76,7 +76,7 @@ fn by_field(mut p: &Person) {
     let field = get_string("choose a field to alter: "); 
     let value = get_string("what value are you changing it to: ");
     match &field[..] {
-        "alias" => p.alias = value;
+        "alias" => {p.alias = value},
         
     };
 }
