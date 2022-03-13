@@ -71,9 +71,10 @@ fn by_alias(hm: &HashMap<String, Person>) -> String {
     get_string("choose an alias to alter: ")
 }
 
-fn by_field(p: &Person) {
+fn by_field(mut p: &Person) {
     println!("{:#?}", p);
-    get_string("choose a field to modify: ");
+   
+    p.get_string("choose a field to modify: ");
 }
 
 fn main() {
