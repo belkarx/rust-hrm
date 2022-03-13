@@ -57,6 +57,7 @@ impl Person {
     }
     fn add_uses(&mut self) {
         let added: Vec<String> = get_string("Uses to add: ").split(", ").map(|s| s.to_string()).collect();
+        self.uses.append(added);
     }
     fn del_uses(&mut self) {
         println!("{:#?}", self.uses);
