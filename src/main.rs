@@ -114,7 +114,7 @@ fn main() {
     let chosen = by_alias(&hm);
     let p = hm.get_mut(&chosen).unwrap();
     println!("{:#?}", p);
-    println!("\nYou can alter\n* name\n*other_contacts\n*uses");
+    println!("\nYou can alter\n    - name\n    - other_contacts\n    - uses\n");
     
     match get_string("choose a field to alter: ").as_str() {
         "name" => p.set_name(),
