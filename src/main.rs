@@ -92,6 +92,7 @@ fn main() {
         let value = get_string("what value are you changing it to: ");
         match &field[..] {
             "alias" => p.alias = value,
+            _ => println!("lmao"),
             
         };
 
