@@ -50,7 +50,8 @@ impl Person {
     fn add_other_contacts(&mut self) {
         let mut added_contacts: Vec<String> = get_string("Contacts to add: ").split(", ").map(|s| s.to_string()).collect();
         if self.other_contacts != None {
-            self.other_contacts = Some(self.other_contacts.unwrap().append(&mut added_contacts));
+            let total = self.other_contacts.unwrap().append(&mut added_contacts);
+            self.other_contacts = Some(total);
         } else {
             self.other_contacts = Some(added_contacts);
         }
