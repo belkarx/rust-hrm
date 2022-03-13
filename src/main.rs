@@ -74,7 +74,8 @@ fn by_alias(mut hm: &HashMap<String, Person>) -> String {
 fn main() {
     //let mut vec = read_from_file();
     let mut hm: HashMap<String, Person> = read_from_file_as_hashmap();
-    delete_by_alias(&hm);
+    let chosen = by_alias(&hm);
+    hm.remove(chosen)l
 
     /*loop {
         let person = init_person();
