@@ -123,7 +123,7 @@ fn main() {
     let field = get_string("choose a (TEXT) field to alter: "); 
     let value = get_string("what value are you changing it to: ");
         match &field[..] {
-            //"alias" => p.alias = value, //alters hasmap key
+            //"alias" => p.alias = value, //alters hashmap key
             "" => p.name = value,
             _ => panic!("Lol field doesn't exist /shrug")
         };
