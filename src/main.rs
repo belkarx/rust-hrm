@@ -56,14 +56,14 @@ impl Person {
         }
     }
     fn add_uses(&mut self) {
-        self.uses = get_string("Uses (comma separated): ").split(", ").map(|s| s.to_string()).collect();
+        self.uses = get_string("Uses to add: ").split(", ").map(|s| s.to_string()).collect();
     }
     fn del_uses(&mut self) {
         println!("{:#?}", self.uses);
         for (i, u) in self.uses.iter().enumerate() {
             println!("{} | {}", i+1, u);
         }
-        let idx = get_string("Which use would you like to delete?").trim().parse::<usize>().expect("Enter a number lol")-1;
+        let idx = get_string("Which use would you like to delete: ").trim().parse::<usize>().expect("Enter a number lol")-1;
         self.uses.remove(idx);
     }
 }
