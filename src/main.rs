@@ -75,14 +75,15 @@ fn delete_by_alias(mut hm: HashMap<String, Person>) {
 fn main() {
     //let mut vec = read_from_file();
     let mut hm: HashMap<String, Person> = read_from_file_as_hashmap();
+    delete_by_alias();
 
-    loop {
+    /*loop {
         let person = init_person();
         println!("{:#?}", person);
         hm.insert(person.alias.clone(), person);
         if get_string("another? ").contains("n") {break;}
     };
-    
+    */
 
     write_to_file_as_hashmap(hm);
     read_from_file_as_hashmap();
