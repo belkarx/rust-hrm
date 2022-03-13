@@ -54,16 +54,8 @@ impl Person {
         self.main_contact = get_string("Main contact: ");
     }
     fn add_other_contacts(&mut self) {
-        if self.other_contacts != None {
-            Some(self.other_contacts).append(get_string("Other contacts (comma separated): ").split(", ").map(|s| s.to_string()).collect());
-        }
-        let other_contacts: Vec<String> = get_string("Other contacts (comma separated): ").split(", ").map(|s| s.to_string()).collect();
-            if other_contacts[0].len() > 0 {
-                self.other_contacts = Some(other_contacts)
-            } else { 
-                self.other_contacts = None 
-            }
-
+        let added_contacts: Vec<String> = get_string("Contacts to add: ").split(", ").map(|s| s.to_string()).collect();
+        self.other_contacts.unwrap_or().append(added_contacts);
     }
     fn set_uses(&mut self) {
         self.uses = get_string("Uses (comma separated): ").split(", ").map(|s| s.to_string()).collect();
