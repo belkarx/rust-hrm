@@ -113,6 +113,8 @@ fn main() {
     let mut hm: HashMap<String, Person> = read_from_file_as_hashmap();
     let chosen = by_alias(&hm);
     let p = hm.get_mut(&chosen).unwrap();
+    println!("{:#?}", p);
+    println!("\nYou can alter\n* name\n*other_contacts\n*uses");
     
     match get_string("choose a field to alter: ").as_str() {
         "name" => p.set_name(),
