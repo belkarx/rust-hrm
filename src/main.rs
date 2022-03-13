@@ -48,7 +48,7 @@ fn write_to_file(p: Person) {
 
 fn read_from_file() {
     let data: Vec<Person> = serde_json::from_str(&fs::read_to_string("address.txt").unwrap()).unwrap();
-    println!("{:#?}");
+    println!("{:#?}", data);
 }
 
 fn main() {
