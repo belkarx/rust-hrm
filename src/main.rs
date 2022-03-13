@@ -50,7 +50,7 @@ fn main() {
     let mut panes = LinearLayout::vertical();
     panes.add_child(TextView::new("preview")
                     .with_id("preview")
-                    .fixed_size((50, 25))
+                    .fixed_size((50, 25));
 
     // Creates a dialog with a single "Quit" button
     siv.add_layer(TextView::new("'q' to quit"));
