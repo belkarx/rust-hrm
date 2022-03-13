@@ -51,16 +51,16 @@ impl Person {
         self.name = Some(get_string("Name [optional]: ")).filter(|s| s.len() > 0);
     }
     fn set_main_contact(&mut self) {
-        self.main_contact = ;
+        self.main_contact = get_string("Main contact: ");
     }
     fn set_other_contacts(&mut self) {
         self.other_contacts = ;
     }
     fn set_uses(&mut self) {
-        self.uses = ;
+        self.uses = get_string("Uses (comma separated): ").split(", ").map(|s| s.to_string()).collect();
     }
     fn set_skill(&mut self) {
-        self.skill = 
+        self.skill = get_string("Technical skill from 0 to 5: ").trim().parse::<i16>().expect("Enter a number lol");
     }
     fn set_social(&mut self) {
         self.social = ;
