@@ -58,7 +58,7 @@ impl Person {
         if self.other_contacts.unwrap() != None {
             self.other_contacts = self.other_contacts.unwrap().append(&mut added_contacts);
         } else {
-            self.other_contacts = Some(added_contacts)l
+            self.other_contacts = Some(added_contacts);
         }
         self.other_contacts.unwrap_or(Some(added_contacts.clone()).append(&mut added_contacts);
     }
