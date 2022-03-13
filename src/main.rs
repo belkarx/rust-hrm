@@ -63,7 +63,7 @@ fn main() {
     
 
     write_to_file(vec);
-    read_from_file;
+    read_from_file();
 
 }
 
