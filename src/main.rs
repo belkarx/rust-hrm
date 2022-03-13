@@ -63,7 +63,12 @@ fn read_from_file_as_hashmap() -> HashMap<String, Person> {
     data
 }
 
-
+fn by_alias(hm: HashMap<String, Person>) {
+    get_string("choose an alias to alter: ");
+    for key in hm.keys() {
+        println!("{}", keys);
+    }
+}
 
 fn main() {
     //let mut vec = read_from_file();
