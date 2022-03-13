@@ -53,7 +53,7 @@ fn read_from_file() -> Vec<Person> {
 }
 
 fn main() {
-    let mut vec = Vec::new();
+    let mut vec = read_from_file();
     loop {
         let person = init_person();
         println!("{:#?}", person);
@@ -63,7 +63,7 @@ fn main() {
     
 
     write_to_file(vec);
-    read_from_file();
+    read_from_file;
 
 }
 
