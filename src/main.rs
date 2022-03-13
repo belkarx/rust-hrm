@@ -42,9 +42,31 @@ fn init_person() -> Person {
         source: get_string("Where did you find this person (IRL, Discord, Reddit, School, etc): ")
     }
 }
+
 impl Person {
     fn set_alias(&mut self) {
-        self.alias =get_string("Alias: ")
+        self.alias = get_string("Alias: ");
+    }
+    fn set_name(&mut self) {
+        self.name = Some(get_string("Name [optional]: ")).filter(|s| s.len() > 0);
+    }
+    fn set_main_contact(&mut self) {
+        self.main_contact = get_string("Alias: ")
+    }
+    fn set_other_contacts(&mut self) {
+        self.other_contacts = get_string("Alias: ")
+    }
+    fn set_uses(&mut self) {
+        self.uses = get_string("Alias: ")
+    }
+    fn set_skill(&mut self) {
+        self.skill = get_string("Alias: ")
+    }
+    fn set_social(&mut self) {
+        self.social = ;
+    }
+    fn set_source(&mut self) {
+        self.source = ;
     }
 }
 
