@@ -75,7 +75,7 @@ fn delete_by_alias(mut hm: HashMap<String, Person>) {
 fn main() {
     //let mut vec = read_from_file();
     let mut hm: HashMap<String, Person> = read_from_file_as_hashmap();
-    delete_by_alias();
+    delete_by_alias(hm);
 
     /*loop {
         let person = init_person();
