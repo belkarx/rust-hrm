@@ -114,7 +114,7 @@ fn main() {
     let chosen = by_alias(&hm);
     let p = hm.get_mut(&chosen).unwrap();
     
-    match &get_string("choose a field to alter: ") {
+    match get_string("choose a field to alter: ") {
         "name" => p.set_name(),
         "other_contacts" => p.add_other_contacts(),
         "uses" => {
