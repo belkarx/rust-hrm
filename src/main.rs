@@ -54,7 +54,7 @@ impl Person {
         self.main_contact = get_string("Main contact: ");
     }
     fn add_other_contacts(&mut self) {
-        let added_contacts: Vec<String> = get_string("Contacts to add: ").split(", ").map(|s| s.to_string()).collect();
+        let mut added_contacts: Vec<String> = get_string("Contacts to add: ").split(", ").map(|s| s.to_string()).collect();
         self.other_contacts.unwrap_or().append(&added_contacts);
     }
     fn set_uses(&mut self) {
