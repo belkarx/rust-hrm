@@ -2,8 +2,9 @@
 mod utils;
 use utils::get_string;
 use serde::{Serialize, Deserialize};
-use cursive::views::{Dialog, TextView};
+use cursive::views::{Dialog, TextView, LinearLayout, SelectView};
 use cursive::Cursive;
+use cursive::traits::*;
 
 #[derive(Debug, Serialize, Deserialize)]
 struct Person {
@@ -44,7 +45,12 @@ fn main() {
     //let person = init_person();
     //println!("{:#?}", person);
     let mut siv = cursive::default();
-    siv.add_global_callback('q', |a| a.quit());
+    siv.add_global_callback('q', |e| e.quit());
+    siv.clear_global_callbacks('q');
+    let mut panes = LinearLayout::vertical();
+    panes.add_child(TextView::new("preview")
+                    .
+
     // Creates a dialog with a single "Quit" button
     siv.add_layer(TextView::new("'q' to quit"));
     /*
