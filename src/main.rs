@@ -71,7 +71,7 @@ fn by_alias(hm: &HashMap<String, Person>) -> String {
     get_string("choose an alias to alter: ")
 }
 
-fn by_field(p: &Person) {
+fn by_field(p: Person) {
     println!("{:#?}", p);
     get_string("choose a field to modify: ");
 }
@@ -80,7 +80,7 @@ fn main() {
     //let mut vec = read_from_file();
     let mut hm: HashMap<String, Person> = read_from_file_as_hashmap();
     let chosen = by_alias(&hm);
-    by_field(hm.get(chosen).unwrap());
+    by_field(hm.get(&chosen).unwrap());
     //hm.remove(&chosen);
 
     /*loop {
