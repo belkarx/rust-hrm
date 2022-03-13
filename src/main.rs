@@ -57,7 +57,7 @@ impl Person {
         self.other_contacts = ;
     }
     fn set_uses(&mut self) {
-        self.uses = 
+        self.uses = ;
     }
     fn set_skill(&mut self) {
         self.skill = 
