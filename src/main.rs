@@ -112,7 +112,7 @@ fn by_field(mut p: &Person) {
         "alias" => {p.alias = value},
         
     };
-}8?
+}*/
 
 fn main() {
     //let mut vec = read_from_file();
