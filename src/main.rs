@@ -8,7 +8,7 @@ use serde::{Serialize, Deserialize};
 use std::fs;
 use serde_json::Map;
 
-#[derive(Debug, Serialize, Deserialize, Clone, Clone)]
+#[derive(Debug, Serialize, Deserialize, Clone, Copy)]
 struct Person {
     alias: String,
     name: Option<String>, //optional
