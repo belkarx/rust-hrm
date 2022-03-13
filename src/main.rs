@@ -68,7 +68,7 @@ fn by_alias(mut hm: &HashMap<String, Person>) -> String {
         println!("{}", key);
     };
     println!();
-    get_string("choose an alias to alter: ");
+    get_string("choose an alias to alter: ")
 }
 
 fn main() {
