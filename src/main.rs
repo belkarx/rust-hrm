@@ -44,12 +44,14 @@ fn main() {
     //let person = init_person();
     //println!("{:#?}", person);
     let mut siv = cursive::default();
-
+    siv.add_global_callback('q', |a| a.quit());
     // Creates a dialog with a single "Quit" button
+    siv.add_layer(TextView::new("'q' to quit"));
+    /*
     siv.add_layer(Dialog::around(TextView::new("Hello Dialog!"))
                          .title("Cursive")
                          .button("Quit", |s| s.quit()));
-
+*/
     // Starts the event loop.
     siv.run();
     
