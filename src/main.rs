@@ -42,6 +42,11 @@ fn init_person() -> Person {
         source: get_string("Where did you find this person (IRL, Discord, Reddit, School, etc): ")
     }
 }
+impl Person {
+    fn set_alias(&mut self) {
+        self.alias =get_string("Alias: ")
+    }
+}
 
 /*fn write_to_file(p: Vec<Person>) {
     fs::write("data.json", serde_json::to_string(&p).unwrap()).unwrap();
@@ -91,8 +96,8 @@ fn main() {
     let value = get_string("what value are you changing it to: ");
         match &field[..] {
             "alias" => p.alias = value,
-            _ => println!("lmao"),
-            
+            ""
+            _ => panic!("Lol field doesn't exist /shrug")
         };
 
 
