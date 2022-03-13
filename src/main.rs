@@ -47,7 +47,7 @@ fn write_to_file(p: Vec<Person>) {
 }
 
 fn read_from_file() -> Vec<Person> {
-    let data: Vec<Person> = serde_json::from_str(&fs::read_to_string("data.json").unwrap()).unwrap();
+    let data: Hashmap<String,Person> = serde_json::from_str(&fs::read_to_string("data.json").unwrap()).unwrap();
     println!("{:#?}", data);
     data
 }
@@ -55,25 +55,8 @@ fn read_from_file() -> Vec<Person> {
 fn main() {
     //let person = init_person();
     //println!("{:#?}", person);
-    let mut siv = cursive::default();
-    siv.add_global_callback('q', |e| e.quit());
-    siv.clear_global_callbacks('q');
-    let mut panes = LinearLayout::vertical();
-                    .fixed_size((50, 25));
 
-    // Creates a dialog with a single "Quit" button
-    siv.add_layer(TextView::new("'q' to quit"));
-    /*
-    siv.add_layer(Dialog::around(TextView::new("Hello Dialog!"))
-                         .title("Cursive")
-                         .button("Quit", |s| s.quit()));
-*/
-    // Starts the event loop.
-    siv.run();
-    
 
-    //tui().unwrap();
-    //let mut book_reviews:HashMap<String, String> = HashMap::new();
 }
 
 #[cfg(test)]
