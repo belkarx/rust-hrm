@@ -60,7 +60,6 @@ impl Person {
         } else {
             self.other_contacts = Some(added_contacts);
         }
-        self.other_contacts.unwrap_or(Some(added_contacts.clone()).append(&mut added_contacts);
     }
     fn set_uses(&mut self) {
         self.uses = get_string("Uses (comma separated): ").split(", ").map(|s| s.to_string()).collect();
