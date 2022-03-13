@@ -42,7 +42,7 @@ fn init_person() -> Person {
         source: get_string("Where did you find this person (IRL, Discord, Reddit, School, etc): ")
     }
 }
-/*
+
 impl Person {
     fn set_alias(&mut self) {
         self.alias = get_string("Alias: ");
@@ -53,7 +53,7 @@ impl Person {
     fn set_main_contact(&mut self) {
         self.main_contact = get_string("Main contact: ");
     }
-    fn set_other_contacts(&mut self) {
+    fn new_other_contact(&mut self) {
         let other_contacts: Vec<String> = get_string("Other contacts (comma separated) [optional]: ").split(", ").map(|s| s.to_string()).collect();
             if other_contacts[0].len() > 0 {
                 self.other_contacts = Some(other_contacts)
@@ -75,7 +75,7 @@ impl Person {
         self.source = get_string("Where did you find this person (IRL, Discord, Reddit, School, etc): ");
     }
 }
-*/
+
 /*fn write_to_file(p: Vec<Person>) {
     fs::write("data.json", serde_json::to_string(&p).unwrap()).unwrap();
 }*/
