@@ -71,7 +71,7 @@ fn main() {
     loop {
         let person = init_person();
         println!("{:#?}", person);
-        hm.insert(person.alias, person);
+        hm.insert(person.alias, &person);
         if get_string("another? ").contains("n") {break;}
     };
     
