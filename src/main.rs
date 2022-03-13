@@ -42,7 +42,7 @@ fn init_person() -> Person {
         source: get_string("Where did you find this person (IRL, Discord, Reddit, School, etc): ")
     }
 }
-
+/*
 impl Person {
     fn set_alias(&mut self) {
         self.alias = get_string("Alias: ");
@@ -75,7 +75,7 @@ impl Person {
         self.source = get_string("Where did you find this person (IRL, Discord, Reddit, School, etc): ");
     }
 }
-
+*/
 /*fn write_to_file(p: Vec<Person>) {
     fs::write("data.json", serde_json::to_string(&p).unwrap()).unwrap();
 }*/
