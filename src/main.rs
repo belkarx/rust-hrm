@@ -63,9 +63,11 @@ fn read_from_file_as_hashmap() -> HashMap<String, Person> {
     data
 }
 
+
+
 fn main() {
     //let mut vec = read_from_file();
-    let mut hm: HashMap<String, Person> = HashMap::new();//read_from_file_as_hashmap();
+    let mut hm: HashMap<String, Person> = read_from_file_as_hashmap();
 
     loop {
         let person = init_person();
