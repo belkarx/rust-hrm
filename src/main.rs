@@ -63,13 +63,12 @@ fn read_from_file_as_hashmap() -> HashMap<String, Person> {
     data
 }
 
-fn delete_by_alias(mut hm: &HashMap<String, Person>) {
+fn by_alias(mut hm: &HashMap<String, Person>) {
     for key in hm.keys() {
         println!("{}", key);
     };
     println!();
-    let chosen = get_string("choose an alias to alter: ");
-    hm.remove(&chosen);
+    get_string("choose an alias to alter: ");
 }
 
 fn main() {
