@@ -76,7 +76,7 @@ fn main() {
     };
     
 
-    write_to_file(vec);
+    write_to_file_as_hashmap(hm);
     read_from_file();
 
 }
