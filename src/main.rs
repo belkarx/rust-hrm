@@ -43,7 +43,7 @@ fn init_person() -> Person {
 }
 
 fn write_to_file(p: Vec<Person>) {
-    fs::write("data.json", serde_json.to_string(p)).unwrap();
+    fs::write("data.json", serde_json.to_string(&p).unwrap()).unwrap();
 }
 
 fn read_from_file() {
