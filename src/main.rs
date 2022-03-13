@@ -67,10 +67,11 @@ fn main() {
     read_from_file_as_hashmap();
     let mut vec = read_from_file();
     let mut hm: HashMap<String, Person> = read_from_file_as_hashmap();
+
     loop {
         let person = init_person();
         println!("{:#?}", person);
-        vec.push(person);
+        hm[person.alias] = person;
         if get_string("another? ").contains("n") {break;}
     };
     
