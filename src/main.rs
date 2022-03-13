@@ -44,7 +44,7 @@ fn init_person() -> Person {
 
 fn main() {
     //let person = init_person();
-    println!("{:#?}", person);
+    //println!("{:#?}", person);
     let mut siv = cursive::default();
 
     // Creates a dialog with a single "Quit" button
