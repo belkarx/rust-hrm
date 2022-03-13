@@ -67,7 +67,7 @@ fn by_alias(hm: HashMap<String, Person>) {
     get_string("choose an alias to alter: ");
     for key in hm.keys() {
         println!("{}", key);
-    }
+    };
 }
 
 fn main() {
