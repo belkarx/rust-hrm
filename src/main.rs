@@ -122,6 +122,7 @@ fn main() {
                 p.add_uses()
             } else { p.del_uses() }
         },
+        _ => panic!("Not an option")
     } 
 
 
