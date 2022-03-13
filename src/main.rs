@@ -44,14 +44,8 @@ fn init_person() -> Person {
 }
 
 impl Person {
-    fn set_alias(&mut self) {
-        self.alias = get_string("Alias: ");
-    }
     fn set_name(&mut self) {
         self.name = Some(get_string("Name [optional]: ")).filter(|s| s.len() > 0);
-    }
-    fn set_main_contact(&mut self) {
-        self.main_contact = get_string("Main contact: ");
     }
     fn add_other_contacts(&mut self) {
         let mut added_contacts: Vec<String> = get_string("Contacts to add: ").split(", ").map(|s| s.to_string()).collect();
@@ -61,17 +55,8 @@ impl Person {
             self.other_contacts = Some(added_contacts);
         }
     }
-    fn set_uses(&mut self) {
+    fn add_uses(&mut self) {
         self.uses = get_string("Uses (comma separated): ").split(", ").map(|s| s.to_string()).collect();
-    }
-    fn set_skill(&mut self) {
-        self.skill = get_string("Technical skill from 0 to 5: ").trim().parse::<i16>().expect("Enter a number lol");
-    }
-    fn set_social(&mut self) {
-        self.social = get_string("Social usefulness from 0 to 5: ").trim().parse::<i16>().expect("Enter a number lol");
-    }
-    fn set_source(&mut self) {
-        self.source = get_string("Where did you find this person (IRL, Discord, Reddit, School, etc): ");
     }
 }
 
