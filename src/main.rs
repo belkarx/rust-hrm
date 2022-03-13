@@ -80,7 +80,7 @@ fn main() {
     //let mut vec = read_from_file();
     let mut hm: HashMap<String, Person> = read_from_file_as_hashmap();
     let chosen = by_alias(&hm);
-    by_field(hm.get(chosen));
+    by_field(hm.get(chosen).unwrap());
     //hm.remove(&chosen);
 
     /*loop {
