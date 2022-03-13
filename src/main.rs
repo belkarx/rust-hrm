@@ -66,7 +66,7 @@ fn read_from_file_as_hashmap() -> HashMap<String, Person> {
 fn main() {
     read_from_file_as_hashmap();
     let mut vec = read_from_file();
-    let mut hm: HashMap<String, Person> = read_from_file();
+    let mut hm: HashMap<String, Person> = read_from_file_as_hashmap();
     loop {
         let person = init_person();
         println!("{:#?}", person);
