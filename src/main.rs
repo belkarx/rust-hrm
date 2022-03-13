@@ -48,6 +48,7 @@ fn write_to_file(p: Person) {
 
 fn read_from_file() {
     let raw = fs::read_to_string("address.txt").unwrap();
+    serde_json::from_str(fs::read_to_string("address.txt").unwrap()).unwrap()
 }
 
 fn main() {
