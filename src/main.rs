@@ -1,7 +1,5 @@
 //use std::collections::HashMap;
 mod utils;
-mod ui;
-use ui::tui;
 use utils::get_string;
 use serde::{Serialize, Deserialize};
 use cursive::views::{Dialog, TextView};
