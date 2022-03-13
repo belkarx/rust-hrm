@@ -69,7 +69,7 @@ fn delete_by_alias(hm: HashMap<String, Person>) {
     };
     println!();
     let chosen = get_string("choose an alias to alter: ");
-    hm.remove(chosen);
+    hm.remove(&chosen);
 }
 
 fn main() {
