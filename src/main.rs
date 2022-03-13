@@ -63,6 +63,7 @@ impl Person {
         for (i, u) in self.uses.iter().enumerate() {
             println!("{} | {}", i+1, u);
         }
+        println!();
         let idx = get_string("Which use would you like to delete: ").trim().parse::<usize>().expect("Enter a number lol")-1;
         self.uses.remove(idx);
     }
