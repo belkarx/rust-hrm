@@ -117,6 +117,7 @@ fn main() {
     //let mut vec = read_from_file();
     let mut hm: HashMap<String, Person> = read_from_file_as_hashmap();
     let choice = String::new();
+    bool modified;
     loop {
         choice = get_string(
         "------------------------------------------------------------------------------------\n
@@ -126,7 +127,9 @@ fn main() {
                 "r" => {
                     let key = by_alias(&hm);
                     println!("{:#?}", hm.get_mut(&chosen).unwrap());
-                "q"
+                    "q" => {
+
+                    }
                 }
             }
     }
