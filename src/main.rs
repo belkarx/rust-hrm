@@ -118,7 +118,7 @@ fn main() {
             },
             "q" => {
                 if modified {
-                    fs::write("data.json", serde_json::to_string(&p).unwrap()).unwrap();
+                    fs::write("data.json", serde_json::to_string(&hm).unwrap()).unwrap();
                 }
                 break;
             },
