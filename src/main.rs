@@ -124,7 +124,7 @@ fn main() {
         MENU: [C]reate [R]ead [U]pdate [D]elete == Sort : [S]source [T]echnicality == [Q]uit
         -------------------------------------------------------------------------------------\n",
         ).to_lowercase();
-        match choice {
+        match choice.as_str() {
             "r" => {
                 let key = by_alias(&hm);
                 println!("{:#?}", hm.get_mut(&choice).unwrap());
