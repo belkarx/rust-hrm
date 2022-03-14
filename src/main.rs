@@ -118,7 +118,7 @@ fn main() {
     let mut hm: HashMap<String, Person> = read_from_file_as_hashmap();
     let modified: bool = false;
     loop {
-        let mut choice = get_string(
+        let choice = get_string(
         "------------------------------------------------------------------------------------\n
         MENU: [C]reate [R]ead [U]pdate [D]elete == Sort : [S]source [T]echnicality == [Q]uit
         -------------------------------------------------------------------------------------\n",
