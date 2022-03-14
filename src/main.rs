@@ -135,6 +135,7 @@ fn main() {
                 }
                 break;
             }
+            _ => panic!("choice not available")
         }
     }
 }
