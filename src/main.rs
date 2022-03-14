@@ -112,8 +112,8 @@ fn by_field(mut p: &Person) {
     };
 }*/
 
+
 fn main() {
-    
     //let mut vec = read_from_file();
     let mut hm: HashMap<String, Person> = read_from_file_as_hashmap();
     let choice = String::new();
@@ -122,21 +122,22 @@ fn main() {
         choice = get_string(
         "------------------------------------------------------------------------------------\n
         MENU: [C]reate [R]ead [U]pdate [D]elete == Sort : [S]source [T]echnicality == [Q]uit
-        -------------------------------------------------------------------------------------\n");
-            match choice {
-                "r" => {
-                    let key = by_alias(&hm);
-                    println!("{:#?}", hm.get_mut(&chosen).unwrap());
-                    "q" => {
-                        if modified {
-                            write_to_file_as_hashmap(hm);
-                        }
-                        break;
-                        }
-                    }
+        -------------------------------------------------------------------------------------\n",
+        );
+        match choice {
+            "r" => {
+                let key = by_alias(&hm);
+                println!("{:#?}", hm.get_mut(&chosen).unwrap());
             }
+            "q" => {
+                if modified {
+                    write_to_file_as_hashmap(hm);
+                }
+                break;
+            }
+        }
     }
-   }
+}
 
 /*
   let chosen = by_alias(&hm);
