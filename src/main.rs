@@ -118,10 +118,7 @@ fn main() {
     let mut hm: HashMap<String, Person> = read_from_file_as_hashmap();
     let modified: bool = false;
     loop {
-        let choice = get_string(
-        "------------------------------------------------------------------------------------\n
-        MENU: [C]reate [R]ead [U]pdate [D]elete == Sort : [S]source [T]echnicality == [Q]uit
-        -------------------------------------------------------------------------------------\n",
+        let choice = get_string("------------------------------------------------------------------------------------\nMENU: [C]reate [R]ead [U]pdate [D]elete == Sort : [S]source [T]echnicality == [Q]uit\n-------------------------------------------------------------------------------------\n",
         ).to_lowercase();
         match choice.as_str() {
             "r" => {
