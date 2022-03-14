@@ -90,7 +90,7 @@ fn read_from_file() -> Vec<Person> {
 */
 fn read_from_file_as_hashmap() -> HashMap<String, Person> {
     let data: HashMap<String, Person> = serde_json::from_str(&fs::read_to_string("data.json").unwrap()).unwrap();
-    println!("{:#?}", data);
+    //println!("{:#?}", data);
     data
 }
 
