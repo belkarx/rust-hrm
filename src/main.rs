@@ -92,7 +92,7 @@ impl Person {
     }
 }
 
-fn print_keys(hm: &HashMap<String, Person>) -> String {
+fn print_keys(hm: &HashMap<String, Person>) {
     for key in hm.keys() {
         println!("{}", key);
     };
@@ -125,6 +125,7 @@ fn main() {
                 println!("Person added successfully");
             },
             "d" => {
+
                 print_keys(&hm);
                 hm.remove(&chosen);
             }
