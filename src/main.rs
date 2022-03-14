@@ -4,8 +4,7 @@ use utils::get_string;
 use serde::{Serialize, Deserialize};
 use std::fs;
 
-//TODO: Tui and add proper get_string prompts, get sorting working, stop using debug print to show
-//Person
+//TODO: Tui and add proper get_string prompts, get sorting working, stop using debug print to show Person
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 struct Person {
@@ -158,47 +157,3 @@ fn main() {
     }
 }
 
-/*
-  let chosen = by_alias(&hm);
-    let p = hm.get_mut(&chosen).unwrap();
-    println!("{:#?}", p);
-    println!("\nYou can alter\n    - name\n    - other_contacts\n    - uses\n");
-    
-    match get_string("choose a field to alter: ").as_str() {
-        "name" => p.set_name(),
-        "other_contacts" => p.add_other_contacts(),
-        "uses" => {
-            if get_string("\nWould you like to add or delete uses: ").contains("a") {
-                p.add_uses()
-            } else { p.del_uses() }
-        },
-        _ => panic!("Not an option")
-    } 
-
-
-    println!("{:#?}", p);
-    
-
-    //hm.remove(&chosen);
-
-    /*loop {
-        let person = init_person();
-        println!("{:#?}", person);
-        hm.insert(person.alias.clone(), person);
-        if get_string("another? ").contains("n") {break;}
-    };
-    */
-
-    read_from_file_as_hashmap();
-
-
- */
-
-
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        assert_eq!(2 + 2, 4);
-    }
-}
