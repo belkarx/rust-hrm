@@ -108,7 +108,7 @@ fn main() {
         ).to_lowercase();
         match choice.as_str() {
             "r" => {
-                let key = by_alias(&hm);
+                let key = print_keys(&hm);
                 print!("Which would you like to read: ");
                 println!("{:#?}", hm.get_mut(&key).unwrap());
             },
