@@ -110,7 +110,7 @@ fn main() {
             "r" => {
                 print_keys(&hm);
                 let key = get_string("Which would you like to read:  (q if none)");
-                if key != "leave" {
+                if key != "q" {
                     println!("{:#?}", hm.get_mut(&key).unwrap());
                 }
             },
