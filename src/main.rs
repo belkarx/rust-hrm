@@ -126,7 +126,7 @@ fn main() {
                 let person = init_person();
                 println!("{:#?}", person);
                 hm.insert(person.alias.clone(), person);
-                println!("Person added sucessfully")
+                println!("Person added sucessfully");
             }
 
             _ => panic!("choice not available")
