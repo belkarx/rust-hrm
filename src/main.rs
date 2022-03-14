@@ -92,7 +92,7 @@ impl Person {
     }
 }
 
-fn by_alias(hm: &HashMap<String, Person>) -> String {
+fn print_keys(hm: &HashMap<String, Person>) -> String {
     for key in hm.keys() {
         println!("{}", key);
     };
