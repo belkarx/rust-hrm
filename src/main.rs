@@ -125,6 +125,8 @@ fn main() {
                 println!("Person added successfully");
             },
             "d" => {
+                print_keys(&hm);
+                let key = get_string("Which would you like to delete: ");
 
                 print_keys(&hm);
                 hm.remove(&chosen);
