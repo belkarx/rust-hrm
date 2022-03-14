@@ -4,7 +4,8 @@ use utils::get_string;
 use serde::{Serialize, Deserialize};
 use std::fs;
 
-//TODO: Tui and add proper get_string prompts
+//TODO: Tui and add proper get_string prompts, get sorting working, stop using debug print to show
+//Person
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 struct Person {
