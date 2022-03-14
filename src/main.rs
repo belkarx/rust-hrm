@@ -124,7 +124,7 @@ fn main() {
         "name" => p.set_name(),
         "other_contacts" => p.add_other_contacts(),
         "uses" => {
-            if get_string("Would you like to add or delete uses: ").contains("a") {
+            if get_string("\nWould you like to add or delete uses: ").contains("a") {
                 p.add_uses()
             } else { p.del_uses() }
         },
