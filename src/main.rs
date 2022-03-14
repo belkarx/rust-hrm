@@ -45,7 +45,7 @@ fn init_person() -> Person {
             .trim()
             .parse::<i16>()
             .expect("Enter a number lol"),
-        source: get_string("Where did you find this person (IRL, Discord, Reddit, School, etc): ")
+        source: get_string("Where did you find this person (IRL, Discord, Reddit, Work, etc): ")
     }
 }
 
