@@ -127,9 +127,7 @@ fn main() {
             "d" => {
                 print_keys(&hm);
                 let key = get_string("Which would you like to delete: ");
-
-                print_keys(&hm);
-                hm.remove(&chosen);
+                hm.remove(&key);
             }
 
             _ => panic!("choice not available")
