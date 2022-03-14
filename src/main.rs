@@ -52,12 +52,7 @@ impl Person {
         if let Some(ref mut x) = self.other_contacts {
             x.append(&mut added_contacts);
         }
-        if self.other_contacts != None {
-            self.other_contacts.unwrap().push(added_contacts[0]);
-            self.other_contacts.clone().unwrap().append(&mut added_contacts);
-        } else {
-            self.other_contacts = Some(added_contacts);
-        }
+
     }
     fn add_uses(&mut self) {
         let mut added: Vec<String> = get_string("Uses to add: ").split(", ").map(|s| s.to_string()).collect();
