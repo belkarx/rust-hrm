@@ -104,7 +104,9 @@ fn main() {
     let mut modified: bool = false;
 
     loop {
-        let choice = get_string("------------------------------------------------------------------------------------\nMENU: [C]reate [R]ead [U]pdate [D]elete == [Q]uit\n-------------------------------------------------------------------------------------\n",
+        let choice = get_string("-------------------------------------------------\n
+                                MENU: [C]reate [R]ead [U]pdate [D]elete == [Q]uit
+                                \n-------------------------------------------------\n",
         ).to_lowercase();
         match choice.as_str() {
             "r" => {
