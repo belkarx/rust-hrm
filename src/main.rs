@@ -127,7 +127,7 @@ fn main() {
         match choice.as_str() {
             "r" => {
                 let key = by_alias(&hm);
-                println!("{:#?}", hm.get_mut(&choice).unwrap());
+                println!("{:#?}", hm.get_mut(&key).unwrap());
             }
             "q" => {
                 if modified {
