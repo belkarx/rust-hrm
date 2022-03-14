@@ -48,11 +48,11 @@ impl Person {
         self.name = Some(get_string("Name [optional]: ")).filter(|s| s.len() > 0);
     }
     fn add_other_contacts(&mut self) {
+        //AHH IT WORKS :))))
         let mut added_contacts: Vec<String> = get_string("Contacts to add: ").split(", ").map(|s| s.to_string()).collect();
         if let Some(ref mut x) = self.other_contacts {
             x.append(&mut added_contacts);
         }
-
     }
     fn add_uses(&mut self) {
         let mut added: Vec<String> = get_string("Uses to add: ").split(", ").map(|s| s.to_string()).collect();
