@@ -6,7 +6,6 @@ use serde::{Serialize, Deserialize};
 //use cursive::Cursive;
 //use cursive::traits::*;
 use std::fs;
-use serde_json::Map;
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 struct Person {
@@ -115,8 +114,9 @@ fn by_field(mut p: &Person) {
 
 fn main() {
     //let mut vec = read_from_file();
-    let mut hm: HashMap<String, Person> = read_from_file_as_hashmap();
+    let mut hm: HashMap<String, Person> = serde_json::from_str(&fs::read_to_string("data.json").unwrap()).unwrap();
     let modified: bool = false;
+
     loop {
         let choice = get_string("------------------------------------------------------------------------------------\nMENU: [C]reate [R]ead [U]pdate [D]elete == Sort : [S]source [T]echnicality == [Q]uit\n-------------------------------------------------------------------------------------\n",
         ).to_lowercase();
@@ -124,13 +124,15 @@ fn main() {
             "r" => {
                 let key = by_alias(&hm);
                 println!("{:#?}", hm.get_mut(&key).unwrap());
-            }
+            },
             "q" => {
                 if modified {
                     write_to_file_as_hashmap(hm);
                 }
                 break;
-            }
+            },
+            "c" => init_person();
+
             _ => panic!("choice not available")
         }
     }
