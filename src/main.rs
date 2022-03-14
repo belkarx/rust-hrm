@@ -133,7 +133,7 @@ fn main() {
             },
             "u" => {
     print_keys(&hm);
-    let ket = get_string("Which would you like to alter: ");
+    let key = get_string("Which would you like to alter: ");
     let p = hm.get_mut(&key).unwrap();
     println!("{:#?}", p);
     println!("\nYou can alter\n    - name\n    - other_contacts\n    - uses\n");
