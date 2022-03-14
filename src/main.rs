@@ -110,7 +110,9 @@ fn main() {
             "r" => {
                 print_keys(&hm);
                 let key = get_string("Which would you like to read: ");
-                println!("{:#?}", hm.get_mut(&key).unwrap());
+                if key != "leave" {
+                    println!("{:#?}", hm.get_mut(&key).unwrap());
+                }
             },
             "q" => {
                 if modified {
