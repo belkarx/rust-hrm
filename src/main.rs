@@ -92,10 +92,6 @@ impl Person {
     }
 }
 
-fn write_to_file_as_hashmap(p: HashMap<String, Person>) {
-    }
-
-
 fn by_alias(hm: &HashMap<String, Person>) -> String {
     for key in hm.keys() {
         println!("{}", key);
@@ -126,7 +122,7 @@ fn main() {
                 let person = init_person();
                 println!("{:#?}", person);
                 hm.insert(person.alias.clone(), person);
-                println!("Person added sucessfully");
+                println!("Person added successfully");
             }
 
             _ => panic!("choice not available")
