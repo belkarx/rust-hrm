@@ -55,7 +55,7 @@ impl Person {
                 x.append(&mut added_contacts);
             }
         } else {
-            self.other_contacts = Some(added_contacts)l
+            self.other_contacts = Some(added_contacts);
         }
     }
     fn add_uses(&mut self) {
