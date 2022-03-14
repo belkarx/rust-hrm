@@ -97,7 +97,6 @@ fn by_alias(hm: &HashMap<String, Person>) -> String {
         println!("{}", key);
     };
     println!();
-    get_string("choose an alias: ")
 }
 
 fn main() {
@@ -110,6 +109,7 @@ fn main() {
         match choice.as_str() {
             "r" => {
                 let key = by_alias(&hm);
+                print!("Which would you like to read: ");
                 println!("{:#?}", hm.get_mut(&key).unwrap());
             },
             "q" => {
@@ -118,11 +118,14 @@ fn main() {
                 }
                 break;
             },
-            "c" =>{
+            "c" => {
                 let person = init_person();
                 println!("{:#?}", person);
                 hm.insert(person.alias.clone(), person);
                 println!("Person added successfully");
+            },
+            "d" => {
+                hm.remove(&chosen);
             }
 
             _ => panic!("choice not available")
