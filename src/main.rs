@@ -136,7 +136,10 @@ fn main() {
                     }
             }
     }
-    let chosen = by_alias(&hm);
+   }
+
+/*
+  let chosen = by_alias(&hm);
     let p = hm.get_mut(&chosen).unwrap();
     println!("{:#?}", p);
     println!("\nYou can alter\n    - name\n    - other_contacts\n    - uses\n");
@@ -168,9 +171,8 @@ fn main() {
 
     read_from_file_as_hashmap();
 
-}
 
-
+ */
 
 
 #[cfg(test)]
