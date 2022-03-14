@@ -125,6 +125,7 @@ fn main() {
                 println!("Person added successfully");
             },
             "d" => {
+                print_keys(&hm);
                 hm.remove(&chosen);
             }
 
