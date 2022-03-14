@@ -128,9 +128,12 @@ fn main() {
                     let key = by_alias(&hm);
                     println!("{:#?}", hm.get_mut(&chosen).unwrap());
                     "q" => {
-
+                        if modified {
+                            write_to_file_as_hashmap(hm);
+                        }
+                        break;
+                        }
                     }
-                }
             }
     }
     let chosen = by_alias(&hm);
@@ -163,7 +166,6 @@ fn main() {
     };
     */
 
-    write_to_file_as_hashmap(hm);
     read_from_file_as_hashmap();
 
 }
