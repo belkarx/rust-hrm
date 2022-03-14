@@ -60,7 +60,7 @@ impl Person {
         }
     }
     fn add_uses(&mut self) {
-        let mut added: vec<string> = get_string("uses to add: ").split(", ").map(|s| s.to_string()).collect();
+        let mut added: Vec<String> = get_string("uses to add: ").split(", ").map(|s| s.to_string()).collect();
         self.uses.append(&mut added);
     }
     fn del_uses(&mut self) {
