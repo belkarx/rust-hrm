@@ -123,11 +123,32 @@ fn main() {
                 println!("{:#?}", person);
                 hm.insert(person.alias.clone(), person);
                 println!("Person added successfully");
+                modified = true;
             },
             "d" => {
                 print_keys(&hm);
                 let key = get_string("Which would you like to delete: ");
                 hm.remove(&key);
+                modified = true;
+            },
+            "u" => {
+    print_keys(&hm);
+    let ket = get_string("Which would you like to alter: ");
+    let p = hm.get_mut(&key).unwrap();
+    println!("{:#?}", p);
+    println!("\nYou can alter\n    - name\n    - other_contacts\n    - uses\n");
+    
+    match get_string("choose a field to alter: ").as_str() {
+        "name" => p.set_name(),
+        "other_contacts" => p.add_other_contacts(),
+        "uses" => {
+            if get_string("\nWould you like to add or delete uses: ").contains("a") {
+                p.add_uses()
+            } else { p.del_uses() }
+        },
+        _ => panic!("Not an option")
+    } 
+
             }
 
             _ => panic!("choice not available")
