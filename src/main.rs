@@ -50,12 +50,16 @@ impl Person {
     fn add_other_contacts(&mut self) {
         //AHH IT WORKS :))))
         let mut added_contacts: Vec<String> = get_string("Contacts to add: ").split(", ").map(|s| s.to_string()).collect();
-        if let Some(ref mut x) = self.other_contacts {
-            x.append(&mut added_contacts);
+        if self.other_contacts != None {
+            if let Some(ref mut x) = self.other_contacts {
+                x.append(&mut added_contacts);
+            }
+        } else {
+            self.other_contacts = Some(added_contacts)l
         }
     }
     fn add_uses(&mut self) {
-        let mut added: Vec<String> = get_string("Uses to add: ").split(", ").map(|s| s.to_string()).collect();
+        let mut added: vec<string> = get_string("uses to add: ").split(", ").map(|s| s.to_string()).collect();
         self.uses.append(&mut added);
     }
     fn del_uses(&mut self) {
@@ -64,16 +68,16 @@ impl Person {
             println!("{} | {}", i+1, u);
         }
         println!();
-        let idx = get_string("Which use would you like to delete: ").trim().parse::<usize>().expect("Enter a number lol")-1;
+        let idx = get_string("which use would you like to delete: ").trim().parse::<usize>().expect("enter a number lol")-1;
         self.uses.remove(idx);
     }
 }
 
-/*fn write_to_file(p: Vec<Person>) {
+/*fn write_to_file(p: vec<person>) {
     fs::write("data.json", serde_json::to_string(&p).unwrap()).unwrap();
 }*/
 
-fn write_to_file_as_hashmap(p: HashMap<String, Person>) {
+fn write_to_file_as_hashmap(p: hashmap<string, person>) {
     fs::write("data.json", serde_json::to_string(&p).unwrap()).unwrap();
 }
 /*
