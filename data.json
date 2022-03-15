@@ -40,24 +40,6 @@
     "social": 2,
     "source": "Discord via comrade linux"
   },
-  "natalia": {
-    "alias": "natalia",
-    "name": "natalie",
-    "main_contact": "text/call",
-    "other_contacts": [
-      "discord",
-      "school emaio",
-      "teams"
-    ],
-    "uses": [
-      "art",
-      "animation",
-      "\"normal\""
-    ],
-    "skill": 0,
-    "social": 5,
-    "source": "interlake"
-  },
     "comrade linux": {
     "alias": "comrade linux",
     "name": null,
@@ -74,26 +56,5 @@
     "skill": 5,
     "social": 3,
     "source": "Reddit"
-  },
-  "aadi": {
-    "alias": "aadi",
-    "name": "Aadi",
-    "main_contact": "telegram",
-    "other_contacts": [
-      "discord",
-      "irl",
-      "teams"
-    ],
-    "uses": [
-      "physics",
-      "quantum",
-      "chem",
-      "arch",
-      "philosphy/theory",
-      "talking about nick"
-    ],
-    "skill": 3,
-    "social": 5,
-    "source": "interlake"
   }
   }
