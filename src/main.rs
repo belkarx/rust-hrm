@@ -125,7 +125,8 @@ fn main() {
                 println!("{:#?}", person);
                 hm.insert(person.alias.clone(), person);
                 println!("Person added successfully");
-                modified = true;
+                //modified = true;
+                fs::write("data.json", serde_json::to_string(&hm).unwrap()).unwrap();
             },
             "d" => {
                 print_keys(&hm);
