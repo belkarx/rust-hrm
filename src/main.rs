@@ -126,7 +126,7 @@ fn main() {
                 hm.insert(person.alias.clone(), person);
                 println!("Person added successfully");
                 //modified = true;
-                fs::write("data.json", serde_json::to_string(&hm).unwrap()).unwrap();
+                fs::write("/home/uk000/projects/rust/crm/data.json", serde_json::to_string(&hm).unwrap()).unwrap();
             },
             "d" => {
                 print_keys(&hm);
