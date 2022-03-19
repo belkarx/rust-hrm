@@ -101,7 +101,7 @@ fn print_keys(hm: &HashMap<String, Person>) {
 }
 
 fn main() {
-    let mut hm: HashMap<String, Person> = serde_json::from_str(&fs::read_to_string("/home/uk000/projects/rust/crm/data.json").unwrap()).unwrap();
+    let mut hm: HashMap<String, Person> = serde_json::from_str(&fs::read_to_string(DATA_PATH).unwrap()).unwrap();
     let mut modified: bool = false;
 
     loop {
