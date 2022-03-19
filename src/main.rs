@@ -117,7 +117,7 @@ fn main() {
             },
             "q" => {
                 if modified {
-                    fs::write("/home/uk000/projects/rust/crm/data.json", serde_json::to_string(&hm).unwrap()).unwrap();
+                    fs::write(DATA_PATH, serde_json::to_string(&hm).unwrap()).unwrap();
                 }
                 break;
             },
