@@ -5,7 +5,7 @@ use serde::{Serialize, Deserialize};
 use std::fs;
 
 //TODO: Tui and add proper get_string prompts, get sorting working, stop using debug print to show Person
-const DATA_PATH: &str = "/home/uk000/projects/rust/hrm/data.json";
+const DATA_PATH: &str = "data.json";
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 struct Person {
