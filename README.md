@@ -17,6 +17,10 @@ struct Person {
 }
 ```
 
+#### Sample Use
+![sample use](assets/sample_use.png "Sample Use")
+
+
 The interface exposes `[C]reate`, `[R]ead`, `[U]pdate`, and `[D]elete`, with plans to support sorting by source location and technical skill.
 
 ## Setup
