@@ -4,10 +4,7 @@
 
 
 ## Setup
-Download from [here]()
-```bash
-./hrm
-```
+Download from [here]() and `./hrm`
 
 #### Or build it yourself
 ```bash
