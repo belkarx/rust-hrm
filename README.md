@@ -3,19 +3,7 @@
 ## Functionality
 This application allows for management of connections and is intended for keeping track of random strangers found online. 
 
-Each contact is stored as a json object with these fields:
-```rust
-struct Person {
-    alias: String,
-    name: Option<String>, //optional
-    main_contact: String,
-    other_contacts: Option<Vec<String>>, //optional
-    uses: Vec<String>,
-    skill: i16,
-    social: i16,
-    source: String
-}
-```
+Each contact is stored as a json object, and data is stored in `data.json` and accessed as a `HashMap`
 
 #### Sample Use
 ![sample use](assets/sample_use.png "Sample Use")
