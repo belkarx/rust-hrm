@@ -1,9 +1,9 @@
 # Rust CRM
 
-# Functionality
-This allows for management of connections and is intended for keeping track of random strangers found online. 
+## Functionality
+This application allows for management of connections and is intended for keeping track of random strangers found online. 
 
-Each contact is stored as a json object, with these fields:
+Each contact is stored as a json object with these fields:
 ```rust
 struct Person {
     alias: String,
@@ -16,7 +16,6 @@ struct Person {
     source: String
 }
 ```
-
 
 The interface exposes `[C]reate`, `[R]ead`, `[U]pdate`, and `[D]elete`, with plans to support sorting by source location and technical skill.
 
