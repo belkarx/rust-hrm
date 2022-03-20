@@ -9,9 +9,9 @@ Download from [here](https://github.com/belkarx/rust-hrm/releases/download/v0.0.
 #### Or build it yourself
 ```bash
 git clone --depth 1 https://github.com/belkarx/rust-hrm.git
-nvim hrm/src/main.rs #change the DATA_PATH variable
+nvim hrm/src/main.rs #change the DATA_PATH variable if you wish
 cargo build --release
-./target/debug/hrm
+./target/release/hrm 
 ```
 
 ## TODO
