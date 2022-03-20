@@ -11,7 +11,9 @@ Download from [here]()
 
 #### Or build it yourself
 ```bash
-git clone --depth 1 <url> && cargo run
+git clone --depth 1 <url>
+nvim hrm/src/main.rs #change the path variable
+cargo build 
 ```
 
 ## TODO
